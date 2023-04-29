@@ -1,0 +1,31 @@
+<div class="dialog">
+  <div class="dialog-content stow-item">
+    <p class="note">
+      {{localize 'CONAN.stowItemPrompt'}} '{{itemName}}'?
+    </p>
+    <form autocomplete="off">
+      <select class="stow-item" name="stowedIn" data-dtype="String">
+        {{#each containers as |container index|}}
+          <option
+            value="{{container._id}}"
+            {{#ifCond ../stowedIn "===" container._id}}
+              selected
+            {{/ifCond}}
+          >
+            {{container.name}}
+          </option>
+        {{/each}}
+      </select>
+    </form>
+  </div>
+  <div class="dialog-buttons stow-item">
+    <button class="dialog-button Save default stow-item-save" data-button="Save">
+      <i class="fa fa-check"></i>
+      Save
+    </button>
+    <button class="dialog-button Cancel stow-item-cancel" data-button="Cancel">
+      <i class="fa fa-times"></i>
+      Cancel
+    </button>
+  </div>
+</div>

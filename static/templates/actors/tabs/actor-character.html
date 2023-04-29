@@ -1,0 +1,88 @@
+<div class="tab character" data-group="primary" data-tab="character">
+  <section class="character-details">
+    <div class="frame">
+      <img
+        class="player-image"
+        alt="{{actor.name}}"
+        src="{{actor.img}}"
+        title="{{actor.name}}"
+        data-edit="img"
+      />
+    </div>
+    <div class="detail-sheet">
+      <div class="detail-small">
+        <div class="pc pc_age">
+          <label for="pc_age"> {{localize 'CONAN.backgroundAge'}} </label>
+          <span>
+            <input
+              id="pc pc_age"
+              name="system.background.age.value"
+              type="Number"
+              value="{{system.background.age.value}}"
+              data-dtype="Number"
+            />
+          </span>
+        </div>
+        <div class="pc pc_gender">
+          <label for="pc_gender"> {{localize 'CONAN.backgroundGender'}} </label>
+          <span>
+            <input
+              id="pc pc_gender"
+              name="system.background.gender.value"
+              type="text"
+              value="{{system.background.gender.value}}"
+              data-dtype="String"
+            />
+          </span>
+        </div>
+      </div>
+      <div class="pc pc_homeland">
+        <label for="pc_homeland">
+          {{localize 'CONAN.backgroundHomeland'}}
+        </label>
+        <span title="{{localize 'CONAN.backgroundHomelandTitle'}}">
+          <input
+            id="pc pc_homeland"
+            name="system.background.homeland.value"
+            type="text"
+            value="{{system.background.homeland.value}}"
+            data-dtype="String"
+          />
+        </span>
+      </div>
+      <div class="pc pc_languages">
+        <label> {{localize 'CONAN.backgroundLanguages'}} </label>
+        <ul class="tags">
+          {{#each knownLanguages as |k|}}
+          <li class="tag {{k}}">{{k}}</li>
+          {{/each}}
+          <li class="tag edit-btn" for="system.background.languages">
+            <a class="trait-selector" data-options="languages" for="system.background.languages">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-plus"
+              >
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div>
+    <hr />
+  </div>
+
+  {{> systems/conan2d20/templates/actors/main/actor-details.html}}
+
+</div>

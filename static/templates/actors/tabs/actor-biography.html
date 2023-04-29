@@ -1,0 +1,96 @@
+<div class="tab character" data-group="primary" data-tab="biography">
+	<section class="character-biography">
+		<div class="pc pc_caste">
+			<label for="pc_caste"> {{localize 'CONAN.backgroundCaste'}} </label>
+			<span title="{{localize 'CONAN.backgroundCasteTitle'}}">
+				<input
+					id="pc pc_caste"
+					name="system.background.caste.value"
+					type="text"
+					value="{{system.background.caste.value}}"
+					data-dtype="String"
+				/>
+			</span>
+		</div>
+		<div class="pc pc_archetype">
+			<label for="pc_archetype">
+				{{localize 'CONAN.backgroundArchetype'}}
+			</label>
+			<span title="{{localize 'CONAN.backgroundArchetypeTitle'}}">
+				<input
+					id="pc pc_archetype"
+					name="system.background.archetype.value"
+					type="text"
+					value="{{system.background.archetype.value}}"
+					data-dtype="String"
+				/>
+			</span>
+		</div>
+		<div class="pc pc_nature">
+			<label for="pc_nature">
+				{{localize 'CONAN.backgroundNature'}}
+			</label>
+			<span title="{{localize 'CONAN.backgroundNatureTitle'}}">
+				<input
+					id="pc pc_nature"
+					name="system.background.nature.value"
+					type="text"
+					value="{{system.background.nature.value}}"
+					data-dtype="String"
+				/>
+			</span>
+		</div>
+		<div class="pc pc_trait">
+			<label for="pc_trait"> {{localize 'CONAN.backgroundTrait'}} </label>
+			<span title="{{localize 'CONAN.backgroundTraitTitle'}}">
+				<input
+					id="pc pc_trait"
+					name="system.background.story.trait.value"
+					type="text"
+					value="{{system.background.story.trait.value}}"
+					data-dtype="String"
+				/>
+			</span>
+		</div>
+		<div class="pc pc_education">
+			<label for="pc_education">
+				{{localize 'CONAN.backgroundEducation'}}
+			</label>
+			<span title="{{localize 'CONAN.backgroundEducationTitle'}}">
+				<input
+					id="pc pc_education"
+					name="system.background.education.value"
+					type="text"
+					value="{{system.background.education.value}}"
+					data-dtype="String"
+				/>
+			</span>
+		</div>
+		<div class="pc pc_warstory">
+			<label for="pc_warstory">
+				{{localize 'CONAN.backgroundWarStory'}}
+			</label>
+			<span title="{{localize 'CONAN.backgroundWarStoryTitle'}}">
+				<input
+					id="pc pc_warstory"
+					name="system.background.war-story.value"
+					type="text"
+					value="{{system.background.war-story.value}}"
+					data-dtype="String"
+				/>
+			</span>
+		</div>
+		<div class="hr">
+			<hr />
+		</div>
+		<div class="biography">
+			{{editor
+				system.details.biography.value
+				target="system.details.biography.value"
+				button=true
+				owner=owner
+				editable=editable
+			}}
+		</div>
+	</section>
+</div>

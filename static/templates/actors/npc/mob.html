@@ -1,0 +1,23 @@
+<div class="npc-mob">
+  <div class="mob-toggle">
+    <h4 class="mob-toggle-label">{{localize "CONAN.npcIsMobLabel"}}</h4>
+    <input
+      class="isMob-toggle"
+      type="checkbox"
+      name="system.isMob"
+      data-dtype="Boolean"
+      {{checked system.isMob}}
+    />
+  </div>
+  {{#if system.isMob}}
+    <div class="mob-count">
+      <h4 class="mob-toggle-label">{{localize "CONAN.npcMobCountLabel"}}</h4>
+      <input
+        type="Number"
+        name="system.mobCount"
+        value="{{system.mobCount}}"
+        data-dtype="Number"
+      />
+    </div>
+  {{/if}}
+</div>

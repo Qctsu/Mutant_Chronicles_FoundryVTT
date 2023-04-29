@@ -1,0 +1,86 @@
+<form class="{{cssClass}} pc-sheet" autocomplete="off">
+  <aside>
+    <img
+      class="logo"
+      src="systems/conan2d20/assets/conan_logo.png"
+      alt=""
+      srcset=""
+    />
+    <!-- Sidebar -->
+    <div class="sidebar" data-group="dashboard" data-tab="attributes">
+      <!-- Health -->
+      {{> systems/conan2d20/templates/actors/main/actor-health.html}}
+
+      <!-- Armor -->
+      {{> systems/conan2d20/templates/actors/main/actor-armor.html}}
+    </div>
+  </aside>
+  <!-- Sheet Header -->
+  {{> systems/conan2d20/templates/actors/main/actor-header.html}}
+
+  <!-- Sheet Navigation -->
+  <nav class="sheet-navigation" data-group="primary">
+    <a class="item active" data-tab="character">
+      {{localize "CONAN.tabCharacterLabel"}}
+    </a>
+
+    <a class="item" data-tab="inventory">
+      {{localize "CONAN.tabInventoryLabel"}}
+    </a>
+
+    <a class="item" data-tab="biography">
+      {{localize "Biography"}}
+    </a>
+
+    <a class="item" data-tab="notes">
+      {{localize "Notes"}}
+    </a>
+
+    <a class="item" data-tab="actions">
+      {{localize "CONAN.tabActionsLabel"}}
+    </a>
+
+    <a class="item" data-tab="skills">
+      {{localize "CONAN.tabSkillsLabel"}}
+    </a>
+
+    <a class="item" data-tab="talents">
+      {{localize "CONAN.tabTalentsLabel"}}
+    </a>
+
+    <a class="item" data-tab="sorcery">
+      {{localize "CONAN.tabSorceryLabel"}}
+    </a>
+
+  </nav>
+
+  <section class="sheet-body">
+    <!-- Sheet Body -->
+    <section class="sheet-content content">
+      <!-- Character -->
+      {{> systems/conan2d20/templates/actors/tabs/actor-character.html}}
+
+      <!-- Actions -->
+      {{> systems/conan2d20/templates/actors/tabs/actor-actions.html}}
+
+      <!-- Skills -->
+      {{> systems/conan2d20/templates/actors/tabs/actor-skills.html}}
+
+      <!-- Talents Tab -->
+      {{> systems/conan2d20/templates/actors/tabs/actor-talents.html}}
+
+      <!-- Inventory -->
+      {{> systems/conan2d20/templates/actors/tabs/actor-inventory.html}}
+
+      <!-- Sorcery -->
+      {{> systems/conan2d20/templates/actors/tabs/actor-spells.html}}
+
+      <!-- Biography -->
+      {{> systems/conan2d20/templates/actors/tabs/actor-biography.html}}
+
+      <!-- Notes -->
+      {{> systems/conan2d20/templates/actors/tabs/actor-notes.html}}
+
+    </section>
+  </section>
+</form>
