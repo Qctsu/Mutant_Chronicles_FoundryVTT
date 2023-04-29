@@ -41,8 +41,7 @@ Review the [Contributing Guilelines](https://github.com/Qctsu/Mutant_Chronicles_
 -->
 ## License
 
-- Logo: .
-- Content: [Mutant Chronicles RPG (3rd Edition)](https://www.modiphius.net/collections/all/mutant-chronicles) © Modiphius Entertainment.
+- Logo & Content: [Mutant Chronicles RPG (3rd Edition)](https://www.modiphius.net/collections/all/mutant-chronicles) © Modiphius Entertainment.
 - Foundry VTT: [Limited License Agreement for module development](https://foundryvtt.com/article/license/).
 - Source code: Copyright © 2023 [RainbowCode.](https:rainbowcode.pl/foundry), and licenced under the [Mozilla Public License Version 2.0](https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/blob/main/LICENSE).
 
