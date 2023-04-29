@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "name": "conan2d20",
+  "version": "1.0.0",
+  "description": "CSS compiler for the Conan 2D20 system",
+  "author": "Jerome Lavoie",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack"
+  },
+  "devDependencies": {
+    "@typhonjs-fvtt/eslint-config-foundry.js": "^0.8.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "*",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.1.6",
+    "eslint-plugin-prettier": "^4.2.1",
+    "fs-extra": "^11.1.0",
+    "gitlab": "^14.2.2",
+    "jest": "^29.3.1",
+    "jest-each": "^29.3.1",
+    "json-stringify-pretty-compact": "^4.0.0",
+    "mini-css-extract-plugin": "*",
+    "prettier": "2.8.1",
+    "prettier-eslint": "^15.0.1",
+    "sass": "^1.56.2",
+    "sass-loader": "^13.2.0",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "write-file-webpack-plugin": "^4.5.1",
+    "yargs": "^17.6.2"
+  },
+  "dependencies": {
+  },
+  "engines": {
+    "node": ">14.0.0 <17.0.0"
+  }
+}

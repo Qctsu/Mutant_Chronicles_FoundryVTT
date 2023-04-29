@@ -1,0 +1,23 @@
+# IDE
+.idea
+.vs
+.vscode
+.references
+*.swp
+
+# Local configs
+foundryconfig.json
+
+# Build Artifacts
+dist/*
+builds
+
+# Node Modules
+npm-debug.log
+node_modules
+
+# Log Files
+*.log
+
+# Temp Files
+scratch/
