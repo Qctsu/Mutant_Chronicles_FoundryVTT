@@ -21,7 +21,7 @@ module.exports = (env, argv) => {
   const config = {
     context: __dirname,
     entry: {
-      main: './src/conan2d20.js',
+      main: './src/mutant.js',
     },
     mode: 'none',
     module: {
