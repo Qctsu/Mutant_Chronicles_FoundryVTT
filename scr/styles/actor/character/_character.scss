@@ -1,0 +1,185 @@
+.character {
+  h3 {
+    border-bottom: 1px solid var(--primary);
+    color: var(--primary);
+    font-family: $serif;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 1em;
+  }
+
+  label,
+  h4 {
+    color: var(--primary);
+    font-family: $sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  input {
+    border-bottom: 1px solid #d3ccbc;
+    font-family: $body-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: calc(100% - 8px);
+
+    &::placeholder {
+      filter: opacity(0.5);
+      color: var(--body);
+    }
+
+    &:focus {
+      border-bottom: 1px solid #644f33;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  select {
+    background-color: var(--darker);
+    border: 1px solid black;
+    width: calc(100% - 8px);
+  }
+
+  option {
+    background-color: var(--darker);
+  }
+
+  .character-details {
+    display: grid;
+    grid-template-areas: "img details";
+    grid-template-columns: 120px auto;
+    margin-top: 4px;
+
+    .frame {
+      grid-area: img;
+      margin-left: 5px;
+      z-index: 3;
+
+      .player-image {
+        @include brown-border;
+        border-radius: 0;
+        border: none;
+        cursor: pointer;
+        max-height: 115px;
+        max-width: 115px;
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+      }
+    }
+
+    .detail-sheet {
+      display: grid;
+      grid-area: details;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: min-content;
+      padding-left: 12px;
+
+      .pc {
+        &_aged,
+        &_gender,
+        &_homeland,
+        &_languages {
+          margin: 0;
+        }
+
+        &_languages {
+          grid-column: span 2;
+
+          ul {
+            margin: 0;
+            padding: 0 0 0 0;
+          }
+        }
+      }
+
+      .detail-small {
+        display: flex;
+      }
+    }
+  }
+
+  .character-biography {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    height: 100%;
+    padding-bottom: 20px;
+
+    .pc {
+      &_archetype,
+      &_caste,
+      &_education,
+      &_nature,
+      &_trait,
+      &_warstory,
+      &_weight {
+        margin: 0;
+      }
+    }
+
+    .hr {
+      grid-column: span 3;
+    }
+
+    .biography {
+      display: flex;
+      grid-column: span 3;
+    }
+  }
+
+  .character-traits {
+    display: grid;
+
+    .tags {
+      width: 100%;
+    }
+
+    .pc {
+        &_experience,
+        &_fortune,
+        &_renown,
+        &_standing {
+          margin: 0;
+        }
+      }
+  }
+
+  .character-extras-container {
+    column-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content;
+    padding: 0;
+    row-gap: 10px;
+
+    label {
+      margin-top: 4px;
+    }
+
+    h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    button {
+      margin: revert;
+      line-height: revert;
+      margin-top: 5px;
+      width: calc(100% - 8px);
+    }
+  }
+
+  .character-conditions {
+    display: grid;
+    grid-row: span 2;
+
+    input[type='checkbox'] {
+      width: 30%;
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,316 @@
+.header-fields {
+  font-family: crushyourenemies;
+}
+
+.npc-attr-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  input[type='number'] {
+    width: 100px;
+    text-align: center;
+  }
+
+  .attribute-entry {
+    text-align: center;
+    margin: 3px;
+
+    .attribute-name {
+      background: $primary-color;
+      color: white;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+.npc-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3px 3px;
+  grid-template-areas:
+    'skill-entry-combat skill-entry-movement'
+    'skill-entry-fortitude skill-entry-senses'
+    'skill-entry-knowledge skill-entry-social';
+  grid-area: npc-skill-grid;
+  margin-bottom: 10px;
+
+  input[type='number'] {
+    text-align: center;
+
+    &::placeholder {
+      color: black;
+    }
+  }
+
+  text-align: center;
+
+  .rollable:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px red;
+  }
+}
+
+.npc-mob {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "mob-toggle mob-toggle mob-count mob-count";
+}
+
+.npc-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "npc-type npc-categories";
+}
+
+.npc-type {
+    display: flex;
+    grid-area: npc-type;
+}
+
+.npc-categories {
+    display: flex;
+    grid-area: npc-categories;
+}
+
+.mob-type {
+    display: flex;
+    grid-area: npc-type;
+}
+
+
+.mob-toggle {
+    display: flex;
+    grid-area: mob-toggle;
+}
+
+.mob-count {
+    display: flex;
+    grid-area: mob-count;
+
+  input[type='number'] {
+    font-family: $body-serif;
+    width: 70px;
+    text-align: center;
+    float: right;
+    margin-right: 20px;
+  }
+}
+
+.mob-toggle-label {
+    background: #40450a;
+    color: white;
+    width: 50%;
+    padding-top: 3px;
+    text-align: center;
+}
+
+.npc-type-label {
+    background: #40450a;
+    color: white;
+    width: 50%;
+    padding-top: 3px;
+    text-align: center;
+}
+
+.npc-traits-label {
+    background: #40450a;
+    color: white;
+    width: 50%;
+    padding-top: 3px;
+    text-align: center;
+}
+
+.entry-label {
+  background: $primary-color;
+  color: white;
+  width: 50%;
+  padding-top: 3px;
+  text-align: center;
+
+  h4 {
+    margin-bottom: 0px;
+  }
+}
+
+.entry-score {
+  color: white;
+  width: 50%;
+}
+
+.skill-entry-cmb {
+  display: flex;
+  grid-area: skill-entry-combat;
+}
+
+.skill-entry-mov {
+  display: flex;
+  grid-area: skill-entry-movement;
+}
+
+.skill-entry-frt {
+  display: flex;
+  grid-area: skill-entry-fortitude;
+}
+
+.skill-entry-sns {
+  display: flex;
+  grid-area: skill-entry-senses;
+}
+
+.skill-entry-knw {
+  display: flex;
+  grid-area: skill-entry-knowledge;
+}
+
+.skill-entry-scl {
+  display: flex;
+  grid-area: skill-entry-social;
+}
+
+.npc-health-grid {
+  display: grid;
+  gap: 3px 3px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'npc-vigor npc-resolve'
+    'npc-armor npc-courage'
+    'npc-wounds npc-trauma';
+  grid-area: npc-health-grid;
+  margin-bottom: 10px;
+  text-align: center;
+
+  input[type='number'] {
+    font-family: $body-serif;
+    text-align: center;
+  }
+}
+
+.section-header {
+  margin-bottom: 10px;
+  align-items: center;
+  display: flex;
+  color: white;
+  background: black;
+  text-align: center;
+
+  h2 {
+    padding-left: 8px;
+    border-bottom: none;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+}
+
+.npc-health-score {
+    display: flex;
+    color: black;
+
+      input[type='number'] {
+        font-family: $body-serif;
+        text-align: center;
+        margin-right: 0px;
+    }
+}
+
+.npc-vigor {
+  display: flex;
+  grid-area: npc-vigor;
+}
+
+.npc-resolve {
+  display: flex;
+  grid-area: npc-resolve;
+}
+
+.npc-courage {
+  display: flex;
+  grid-area: npc-courage;
+}
+
+.npc-wounds {
+  display: flex;
+  grid-area: npc-wounds;
+}
+
+.npc-trauma {
+  display: flex;
+  grid-area: npc-trauma;
+}
+
+.npc-armor {
+  display: flex;
+  grid-area: npc-armor;
+}
+
+.npc-notes {
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.notes-entry {
+  height: 100%;
+
+  .editor-content {
+    margin: 10px;
+    overflow-y: visible;
+    min-height: 100px;
+    max-height: 100%;
+  }
+  .editor {
+    height: auto;
+  }
+}
+
+.footer {
+  display: flex;
+  text-align: center;
+
+  input[type='number'] {
+    font-family: $body-serif;
+    width: 70px;
+    text-align: center;
+    float: right;
+    margin-right: 20px;
+  }
+
+  .entry-score {
+    color: $primary-color;
+
+    input[type='text'] {
+        color: black;
+    }
+  }
+}
+
+.section-header {
+  margin-bottom: 10px;
+  align-items: center;
+  display: flex;
+  color: white;
+  background: black;
+  text-align: center;
+
+  h2 {
+    padding-left: 8px;
+    border-bottom: none;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+}
+
+@import 'attacks', 'actions';

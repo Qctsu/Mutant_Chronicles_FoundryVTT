@@ -1,0 +1,167 @@
+#chat-log .chat-message {
+  background-image: url('../assets/chat-message-border-1a.png');
+  background-size: cover;
+  padding-top: 15px;
+
+  img {
+    height: 45px;
+    width: 45px;
+  }
+
+  .message-content {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    h2, h3, h4 {
+      @include p-reset;
+      border-bottom: none;
+      text-transform: capitalize;
+    }
+
+    h4 {
+      margin-top: 4px;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    .roll-outcomes,
+    .roll-complications {
+      padding-bottom: 5px;
+      padding-top: 10px;
+
+    }
+
+    .roll-card {
+      width: 100%;
+
+      .roll.selected {
+        opacity: 0.40;
+      }
+
+      .roll-list-entry {
+        background-repeat: no-repeat;
+        background-size: 36px;
+        color: white;
+        float: left;
+        font-family: Norse;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 36px;
+        text-align: center;
+        text-shadow: 2px 2px black;
+        width: 36px;
+      }
+
+      // Damage Dice
+      .d6-combat1 {
+        background-image: url('../assets/icons/dice/d6-blank.svg');
+        margin: 2px;
+      }
+      .d6-combat2 {
+        background-image: url('../assets/icons/dice/d6-blank.svg');
+        margin: 2px;
+      }
+      .d6-combat3 {
+        background-image: url('../assets/icons/dice/d6-blank.svg');
+        margin: 2px;
+      }
+      .d6-combat4 {
+        background-image: url('../assets/icons/dice/d6-blank.svg');
+        margin: 2px;
+      }
+      .d6-combat5 {
+        background-image: url('../assets/icons/dice/d6-phoenix.svg');
+        margin: 2px;
+      }
+      .d6-combat6 {
+        background-image: url('../assets/icons/dice/d6-phoenix.svg');
+        margin: 2px;
+      }
+
+      // Skill Check Dice
+      .complication {
+        background-image: url('../assets/icons/dice/d20-complication.svg');
+      }
+      .critical {
+        background-image: url('../assets/icons/dice/d20-critical.svg');
+      }
+      .fail {
+        background-image: url('../assets/icons/dice/d20-fail.svg');
+      }
+      .success {
+        background-image: url('../assets/icons/dice/d20-success.svg');
+      }
+    } // .roll-card
+  } // .message-content
+
+  .card-header {
+    display: grid;
+    grid-template-columns: 1fr 45px;
+    grid-template-rows: minmax(45px, max-content) 1fr;
+    align-items: center;
+
+    h2 {
+      border: unset;
+      margin: unset;
+      margin-left: 2px;
+    }
+  }
+
+  .message-sender {
+    text-transform: uppercase;
+  }
+
+  .chat-tag {
+    @include micro;
+    background-color: var(--primary);
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 1px rgba(black, 0.5);
+    color: white;
+    display: inline-flex;
+    padding: 3px 4px;
+
+    & + .tag,
+    &:first-child {
+      margin-right: 3px;
+    }
+
+    &.edit-btn {
+      align-items: center;
+      background-color: white;
+      border-radius: 0;
+      display: flex;
+      justify-content: center;
+
+      a {
+        align-items: center;
+        color: var(--primary);
+        display: inline-flex;
+        justify-content: center;
+
+        svg {
+          height: 9px;
+          width: auto;
+        }
+      } // a
+    } // &.edit-btn
+
+    &_primary {
+      background-color: var(--primary);
+    }
+
+    &_secondary {
+      background-color: var(--secondary);
+    }
+
+    &_tertiary {
+      background-color: var(--tertiary);
+    }
+
+    &_alt {
+      background-color: var(--alt);
+    }
+  } // .chat-tag
+} // #chat-log .chat-message

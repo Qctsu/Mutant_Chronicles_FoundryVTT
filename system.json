@@ -1,8 +1,8 @@
 {
-  "id": "conan2d20",
-  "title": "Robert E. Howard's Conan: Adventures In An Age Undreamed Of",
-  "description": "A community-contributed game system for running games of CONAN in the cinematic 2D20 game system by Modiphius on the Foundry VTT environment. Please refer to the README.md file for reporting issues.",
-  "version": "1.8.1",
+  "id": "mutantcronicles3rdedition",
+  "title": "Mutant Chronicles (3rd edition)",
+  "description": "A community-contributed game system for running games of MUTANT CHRONICLES (3RD EDITION)game system by Modiphius on the Foundry VTT environment. Please refer to the README.md file for reporting issues.",
+  "version": "0.0.1",
   "schema": "0.22122701",
   "compatibility": {
     "maximum": "10",
@@ -11,26 +11,19 @@
   },
   "authors": [
     {
-      "name": "Jerome Lavoie",
-      "email": "kayhos@gmail.com",
-      "discord": "KayhosRaven#1642",
-      "reddit": "u/Kayhosraven"
+      "name": "Kucu",
+      "email": "kontakt@rainbowcode.pl",
+      "discord": "Kucu#7777"
     },
     {
-      "name": "Ian Henry",
-      "url": "http://www.blackbell.games/",
-      "discord": "eeyun#0890"
-    },
-    {
-      "name": "Paul Maskelyne",
-      "discord": "Muttley#3296",
-      "email": "mu77ley@gmail.com",
-      "mastodon": "@muttley@dice.camp"
+      "name": "PoProstuPawel",
+      "discord": "Po prostu Paweł#5685",
+      "email": "pawel.sandecki@gmail.com"
     }
   ],
   "scripts": [],
   "esmodules": ["main.bundle.js"],
-  "styles": ["styles/conan2d20.css"],
+  "styles": ["styles/mutantcronicles3rdedition.css"],
   "packs": [
     {
       "name": "actions-core",
@@ -103,10 +96,10 @@
   "primaryTokenAttribute": "health.physical",
   "secondaryTokenAttribute": "health.mental",
   "allowBugReporter": true,
-  "bugs": "https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/-/issues",
-  "url": "https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20",
-  "manifest": "https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/-/jobs/artifacts/release/raw/system.json?job=build",
-  "download": "https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/-/jobs/artifacts/release/raw/conan2d20.zip?job=build",
+  "bugs": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT",
+  "url": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT",
+  "manifest": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/system.json?job=build",
+  "download": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/mutantcronicle3rdedition.zip?job=build",
   "license": "LICENSE.txt",
-  "background": "./assets/LoadingScreenBackdropImage_11.png"
+  "background": "./assets/LoadingScreenBackdropImage.jpg"
 }

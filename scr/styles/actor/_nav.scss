@@ -1,0 +1,23 @@
+nav.sheet-navigation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+
+  a {
+    color: black;
+    font-family: Norsebold;
+    font-size: 24px;
+    padding: 1px 0;
+
+    &.active {
+      @include input-glow-red;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      @include input-glow-red;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  } // a
+} // nav.sheet-navigation

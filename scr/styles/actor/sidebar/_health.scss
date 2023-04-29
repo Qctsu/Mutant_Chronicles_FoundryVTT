@@ -1,0 +1,228 @@
+.health-container {
+
+  h2 {
+    color: #bdbcbb;
+    font-size: 20px;
+    border: transparent;
+  }
+
+  input[type='text'] {
+    color: white;
+    font-family: Norse;
+    font-size: 32px;
+    font-weight: 700;
+    height: 32px;
+    letter-spacing: -1px;
+    margin-top: 16px;
+    width: 100%;
+
+    &:hover {
+      @include input-glow;
+    }
+  }
+
+  span {
+    text-align: center;
+  }
+
+  .fa,
+  .far,
+  .fas {
+    &:hover {
+      @include input-glow;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .fa-skull {
+    color: red;
+  }
+
+  .fa-star-of-life {
+    color: white;
+  }
+
+  .resolve-container {
+    display: grid;
+    grid-area: resolve-container;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'resolve-label resolve-label'
+      'resolve-value resolve-max';
+
+    .resolve-label {
+      grid-area: resolve-label;
+      padding-left: 17px;
+      padding-top: 10px;
+    }
+
+    .resolve-max {
+      background-image: url('../assets/icons/resolve-display.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: grid;
+      grid-area: resolve-max;
+      text-align: center;
+
+      input[type='text'] {
+        color: #bdbcbb;
+      }
+    }
+
+    .resolve-sub {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .resolve-value {
+      background-image: url('../assets/icons/resolve-display-bright.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: grid;
+      grid-area: resolve-value;
+      text-align: center;
+    }
+  } // .resolve-container
+
+  .resolve-traumas {
+    color: #bdbcbb;
+    font-size: 12px;
+    grid-area: resolve-traumas;
+
+    label {
+      color: #bdbcbb;
+      padding-left: 69px;
+      font-size: 10px;
+    }
+  } // .resolve-traumas
+
+  .sidebar-health {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'vigor-container'
+      'vigor-wounds'
+      'resolve-container'
+      'resolve-traumas';
+  }
+
+  .vigor-container {
+    display: grid;
+    grid-area: vigor-container;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'vigor-label vigor-label'
+      'vigor-value vigor-max';
+
+    .vigor-label {
+      padding-top: 10px;
+      padding-left: 17px;
+      grid-area: vigor-label;
+    }
+
+    .vigor-max {
+      background-image: url('../assets/icons/vigor-display.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: grid;
+      grid-area: vigor-max;
+      text-align: center;
+
+      input[type='text'] {
+        color: #bdbcbb;
+      }
+    } // .vigor-max
+
+    .vigor-sub {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .vigor-value {
+      background-image: url('../assets/icons/vigor-display-bright.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: grid;
+      grid-area: vigor-value;
+      text-align: center;
+    }
+  } // .vigor-container
+
+  .vigor-wounds {
+    color: #bdbcbb;
+    font-size: 12px;
+    grid-area: vigor-wounds;
+
+    label {
+      color: #bdbcbb;
+      padding-left: 72px;
+      font-size: 10px;
+    }
+  } // .vigor-wounds
+
+} // .health-container
+
+.health-bonuses {
+  font-size: 20px;
+
+  .neg {
+      color: red;
+  }
+
+  .pos {
+      color: white;
+  }
+
+  .resolve-bonus {
+    position: absolute;
+    top: 248px;
+    left: 185px;
+  }
+
+  .vigor-bonus {
+    position: absolute;
+    top: 125px;
+    left: 185px;
+  }
+} // .health-bonuses
+
+.exhaustion-trackers {
+  input[type='number'] {
+    background: none;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    font-family: Norse;
+    text-align: center;
+
+    &:hover {
+      @include input-glow;
+    }
+  }
+
+  .despair-tracker {
+    background-image: url('../assets/icons/fd2-tracker.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 136px;
+    position: absolute;
+    top: 255px;
+  }
+
+  .fatigue-tracker {
+    background-image: url('../assets/icons/fd2-tracker.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 136px;
+    position: absolute;
+    top: 125px;
+  }
+} // .exhaustion-trackers
