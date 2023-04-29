@@ -10,7 +10,7 @@ In the setup page of your Foundry VTT installation, when running on your own com
 
 Go into the **Game Systems** sections and click on the **Install System** button at the bottom left.
 
-You can either search for the System under **Mutant Chronicles RPG (3rd Edition)** in the list available or directly request an installation from Gitlab at https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT
+You can either search for the System under **Mutant Chronicles RPG (3rd Edition)** in the list available or directly request an installation from GitHub at https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT
 
 ## Support & Bug Reports
 
