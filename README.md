@@ -14,7 +14,7 @@ You can either search for the System under **Mutant Chronicles RPG (3rd Edition)
 
 ## Support & Bug Reports
 
-Please send an email to [mailadres@mail.pl](mailto:mailadres@mail.pl) with the below content
+Please send an email to [mutantchronicles@rainbowcode.pl](mailto:mutantchronicles@rainbowcode.pl) with the below content
 
 Following things are greatly appreciated and speed up the resolution time:
 
@@ -33,25 +33,21 @@ Following things are greatly appreciated and speed up the resolution time:
 
 Code and content contributions are welcome. Please feel free to submit issues to the issue tracker or submit merge requests for code changes.
 
-Review the [Contributing Guilelines](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/-/blob/master/CONTRIBUTING.md) to know how we would prefer receiving your help.
+Review the [Contributing Guilelines](https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/blob/main/CONTRIBUTING.md) to know how we would prefer receiving your help.
 
-### Code Contributions
+<!--### Code Contributions
 
 @Hooking was generous enough to let us reuse the item selector from his game system [Foundry VTT Pathfinder 2e (PF2e)](https://gitlab.com/hooking/foundry-vtt---pathfinder-2e). That piece of code was contributed by `an unkown contributor` on the PF2e game system. MOST of this project has been very heavily influenced by [Foundry VTT Pathfinder 2E](https://gitlab.com/hooking/foundry-vtt---pathfinder-2e). All credit to their previous work and generosity.
-
+-->
 ## License
 
-- Logo: Robert E. Howard's Conan: Adventures in an Age Undreamed of © Modiphius Entertainment.
-- Content: [Robert E. Howard's Conan](https://www.modiphius.net/collections/conan) © Modiphius Entertainment.
+- Logo: .
+- Content: [Mutant Chronicles RPG (3rd Edition)](https://www.modiphius.net/collections/all/mutant-chronicles) © Modiphius Entertainment.
 - Foundry VTT: [Limited License Agreement for module development](https://foundryvtt.com/article/license/).
-- Source code: Copyright © 2021 [FVTT Modiphius org.](https://gitlab.com/fvtt-modiphius), and licenced under the [Mozilla Public License Version 2.0](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/-/blob/master/LICENSE).
+- Source code: Copyright © 2023 [RainbowCode.](https:rainbowcode.pl/foundry), and licenced under the [Mozilla Public License Version 2.0](https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/blob/main/LICENSE).
 
 All copyright assets used with explicit consent from Modiphius Entertainment. The fvtt-modiphius developer community holds no claim to underlying copyrighted assets.
 
-© 2017 Conan Properties International LLC (“CPI”). Conan, Conan The Barbarian, Hyboria and related logos, characters, names, and distinctive likenesses thereof are trademarks or registered trademarks of CPI. All rights reserved.
+The system and Modiphius Logos are copyright Modiphius Entertainment Ltd. 2015–2017.
 
-Robert E. Howard and related logos, characters, names, and distinctive likenesses thereof are trademarks or registered trademarks of Robert E. Howard Properties Inc. All rights reserved.
-
-The 2d20 system and Modiphius Logos are copyright Modiphius Entertainment Ltd. 2015–2017.
-
-All 2d20 system text is copyright Modiphius Entertainment Ltd.
+All system text is copyright Modiphius Entertainment Ltd.
