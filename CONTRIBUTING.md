@@ -8,15 +8,13 @@ Conan 2D20 is under active development, with rapid and dramatic changes. It curr
 
 To install the Conan 2D20 system for development on Foundry Virtual Tabletop:
 
-1. Clone the repository `git clone git@gitlab.com:fvtt-modiphius/foundryvtt-conan2d20`
-1. Enter the project directory `cd foundryvtt-conan2d20`
-1. Install node modules `npm -c install`
+1. Clone the repository `git clone https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT`
 1. Copy foundryconfig.example.json to foundryconfig.json and update the data-path to root of your foundry server's Data directory.
 
 ```json
 {
   "dataPath": "/example/path/to/FoundryVTT/Data",
-  "systemName": "conan2d20"
+  "systemName": "mutant_chronicles (3rd Edition)"
 }
 ```
 
@@ -36,9 +34,9 @@ You can find out where the `foundrydata` folder is located in the Configuration 
 
 ## Testing
 
-[![pipeline status](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/badges/master/pipeline.svg)](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/-/commits/master)
-
-Please run your code changes in a Conan 2D20 World before commiting to GitHub.
+<!-- [![pipeline status](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/badges/master/pipeline.svg)](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/-/commits/master)
+-->
+Please run your code changes in a Mutant Chronicles (3rd Edition) World before commiting to GitHub.
 
 Before major code commits, ensure all standard entities remain functional:
 
