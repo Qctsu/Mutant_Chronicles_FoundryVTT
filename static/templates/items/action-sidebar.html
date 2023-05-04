@@ -1,0 +1,17 @@
+<h4 class="sidebar-summary">{{localize "MUTANT.actionSummary"}}</h4>
+
+<span class="item-summary">
+  {{lookup featTypes item.system.featType.value}}
+</span>
+{{#if item.system.requirements.value}}
+  <span class="item-summary">
+    {{ item.system.requirements.value}}
+  </span
+>{{/if}}
+{{#if itemTags.length}}
+  <ol class="item-tags">
+    {{#each itemTags}}
+      <li class="tag">{{this}}</li>
+    {{/each}}
+  </ol>
+{{/if}}

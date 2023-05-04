@@ -1,0 +1,115 @@
+<div class="form-group">
+  <label>{{localize "MUTANT.transpoCategoryLabel"}}</label>
+  <select name="system.categories" data-dtype="String">
+    {{#select item.system.categories}}
+      {{#each categories as |label key|}}
+        <option value="{{key}}">{{localize label}}</option>
+      {{/each}}
+    {{/select}}
+  </select>
+</div>
+
+{{#ifCond item.system.categories '==' 'mounts' }}
+  <div class="form-group">
+    <label>{{localize "MUTANT.transpoTypeLabel"}}</label>
+    <select name="system.transpoType" data-dtype="String">
+      {{#select item.system.transpoType}}
+        {{#each mountType as |label key|}}
+          <option value="{{key}}">{{localize label}}</option>
+        {{/each}}
+      {{/select}}
+    </select>
+  </div>
+{{/ifCond}}
+
+{{#ifCond item.system.categories '==' 'carts' }}
+  <div class="form-group">
+    <label>{{localize "MUTANT.transpoTypeLabel"}}</label>
+    <select name="system.transpoType" data-dtype="String">
+      {{#select item.system.transpoType}}
+        {{#each cartType as |label key|}}
+        <option value="{{key}}">{{localize label}}</option>
+        {{/each}}
+      {{/select}}
+    </select>
+  </div>
+{{/ifCond}}
+
+{{#ifCond item.system.categories '==' 'boats' }}
+  <div class="form-group">
+    <label>{{localize "MUTANT.transpoTypeLabel"}}</label>
+    <select name="system.transpoType" data-dtype="String">
+      {{#select item.system.transpoType}}
+        {{#each boatType as |label key|}}
+          <option value="{{key}}">{{localize label}}</option>
+        {{/each}}
+      {{/select}}
+    </select>
+  </div>
+{{/ifCond}}
+
+<div class="form-group">
+  <label>{{localize "MUTANT.transpoStowageLabel"}}</label>
+  <input
+    type="Number"
+    name="system.stowage.value"
+    value="{{item.system.stowage.value}}"
+    data-dtype="Number"
+  />
+</div>
+
+<div class="form-group">
+  <label>{{localize "MUTANT.transpoStowageCapLabel"}}</label>
+  <input
+    type="Number"
+    name="system.stowage.max"
+    value="{{item.system.stowage.max}}"
+    data-dtype="Number"
+  />
+</div>
+
+<div class="form-group">
+  <label>{{localize "MUTANT.transpoPassengerLabel"}}</label>
+  <input
+    type="Number"
+    name="system.passengers.current"
+    value="{{item.system.passengers.current}}"
+    data-dtype="Number"
+  />
+</div>
+
+<div class="form-group">
+  <label>{{localize "MUTANT.transpoPassengerCapLabel"}}</label>
+  <input
+    type="Number"
+    name="system.passengers.capacity"
+    value="{{item.system.passengers.capacity}}"
+    data-dtype="Number"
+  />
+</div>
+
+{{#ifCond item.system.categories '==' 'mounts' }}
+  <div class="form-group">
+    <label>{{localize "MUTANT.transpoCapabilitiesLabel"}}</label>
+    <select name="system.capabilities" data-dtype="String">
+      {{#select item.system.capabilities}}
+        {{#each capabilities as |label key|}}
+          <option value="{{key}}">{{localize label}}</option>
+        {{/each}}
+      {{/select}}
+    </select>
+  </div>
+{{/ifCond}}
+
+{{#ifCond item.system.categories '==' 'carts' }}
+  <div class="form-group">
+    <label>{{localize "MUTANT.transpoAnimalsLabel"}}</label>
+    <select name="system.animals" data-dtype="String">
+      {{#select item.system.animals}}
+        {{#each animals as |label key|}}
+        <option value="{{key}}">{{localize label}}</option>
+        {{/each}}
+      {{/select}}
+    </select>
+  </div>
+{{/ifCond}}

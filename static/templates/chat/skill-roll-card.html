@@ -1,0 +1,58 @@
+{{#if rollData.item}}
+  <h2>{{rollData.item.name}}</h2>
+  <h3>{{rollData.title}}</h4>
+{{else}}
+  <h2>{{rollData.title}}</h2>
+{{/if}}
+<h4>
+  {{rollData.difficulty.display}}
+</h4>
+<div class="roll-card">
+  {{#each results.rolls as |roll r|}}
+    <span
+      id="{{r}}"
+      {{#if roll.complication}}
+        class="roll-list-entry roll complication"
+      {{else if roll.critical}}
+        class="roll-list-entry roll critical"
+      {{else if roll.success}}
+        class="roll-list-entry roll success"
+      {{else}}
+        class="roll-list-entry roll fail"
+      {{/if}}
+    >
+      {{roll.result}}
+    </span>
+  {{/each}}
+</div>
+<div class="roll-outcomes">
+  <label>Successes: </label>{{results.successes}}
+	{{#ifCond rollData.bonus.successes '>' 0}}
+		(+{{rollData.bonus.successes}} {{localize "MUTANT.bonusLowerCase"}})
+	{{/ifCond}}
+  {{#if results.momentum}}
+    <br />
+    <label>{{localize "MUTANT.momentum"}}: </label>{{results.momentum}}
+    {{#ifCond rollData.bonus.momentum '>' 0}}
+      (+{{rollData.bonus.momentum}} {{localize "MUTANT.bonusLowerCase"}})
+    {{/ifCond}}
+  {{/if}}
+  {{#if results.complications}}
+    <br />
+    <label>{{localize "MUTANT.complications"}}: </label>{{results.complications}}
+  {{/if}}
+</div>
+{{#if results.result}}
+  <h3 class="success-or-fail">{{results.result}}</h3>
+{{/if}}
+{{#if rollData.actorId}}
+	{{#if results.momentum}}
+		<div class="card-buttons">
+			<button
+				class="chat-bank-momentum"
+			>
+			{{localize "MUTANT.rollMomentumSpendTitle"}}
+			</button>
+		</div>
+	{{/if}}
+{{/if}}

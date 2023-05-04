@@ -1,0 +1,72 @@
+<div class="form-group">
+  <label>{{localize "MUTANT.displaySkillLabel"}}</label>
+  <select name="system.skill" data-dtype="String">
+    {{#select item.system.skill}}
+      {{#each displaySkills as |name type|}}
+        <option value="{{type}}">
+          {{name}}
+        </option>
+      {{/each}}
+    {{/select}}
+  </select>
+</div>
+
+<div class="form-group">
+  <label>{{localize "MUTANT.displayRangeLabel"}}</label>
+  <select name="system.range" data-dtype="String">
+    {{#select item.system.range}}
+      {{#each displayRanges as |name range|}}
+        <option value="{{range}}">
+          {{name}}
+        </option>
+      {{/each}}
+    {{/select}}
+  </select>
+</div>
+
+<div class="form-group">
+  <label title="{{localize MUTANT.displayDamageTitle}}">
+    {{localize "MUTANT.displayDamageLabel"}}
+    <i class="fas fa-info-circle"></i>
+  </label>
+</div>
+
+<div class="form-group">
+  <label>{{localize "MUTANT.displayBaseDamageLabel"}}</label>
+  <div class="details-container-three-columns">
+    <select name="system.damage.dice" data-dtype="String">
+      {{#select item.system.damage.dice}}
+        {{#each damageDice as |name type|}}
+          <option value="{{type}}">
+            {{name}}
+          </option>
+        {{/each}}
+      {{/select}}
+    </select>
+    <div class="combat-dice"></div>
+  </div>
+</div>
+
+<div class="form-group-stacked">
+  <label for="system.qualities.value">
+    {{localize "MUTANT.qualitiesLabel"}}
+    <a
+      class="trait-selector"
+      data-options="weaponQualities"
+      data-has-values="true"
+      data-allow-empty-values="true"
+    >
+      <i class="fas fa-edit"></i>
+    </a>
+  </label>
+  <ul class="qualities-list tags">
+    {{#each item.system.qualities.value as |v k|}}
+      <span class="tag {{k}}">
+        {{v.label}}
+        {{#if v.value}}
+          ({{v.value}})
+        {{/if}}
+      </span>
+    {{/each}}
+  </ul>
+</div>

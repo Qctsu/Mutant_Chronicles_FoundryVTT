@@ -1,0 +1,82 @@
+<div class="form-group">
+  <label>{{localize "MUTANT.armorTypeLabel"}}</label>
+  <select name="system.armorType" data-dtype="String">
+    {{#select item.system.armorType}}
+      {{#each armorTypes as |label key|}}
+        <option value="{{key}}">
+          {{localize label}}
+        </option>
+      {{/each}}
+    {{/select}}
+  </select>
+</div>
+
+<div class="form-group">
+  <label>{{localize "MUTANT.armorSoakLabel"}}</label>
+  <input
+    type="Number"
+    name="system.soak"
+    value="{{item.system.soak}}"
+    data-dtype="Number"
+  />
+</div>
+
+<div class="form-group">
+  <input
+    type="checkbox"
+    name="system.equipped"
+    value="1"
+    data-dtype="Boolean"
+    {{checked item.system.equipped}}
+  />
+  <label>{{localize "MUTANT.equipmentEquippedLabel"}}</label>
+</div>
+
+<div class="form-group">
+  <input
+    type="checkbox"
+    name="system.broken"
+    value="1"
+    data-dtype="Boolean"
+    {{checked item.system.broken}}
+  />
+  <label>{{localize "MUTANT.armorBrokenLabel"}}</label>
+</div>
+
+<div class="form-group-stacked">
+  <label for="system.coverage">
+    {{localize "MUTANT.coverageLabel"}}
+    <a
+      class="trait-selector"
+      data-options="coverageTypes"
+    >
+      <i class="fas fa-edit"></i>
+    </a>
+  </label>
+  <ul class="coverages-list tags">
+    {{#each item.system.coverage.value as |v k|}}
+      <span class="tag tag_secondary {{k}}">
+        {{v}}
+      </span>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="form-group-stacked">
+  <label for="system.qualities">
+    {{localize "MUTANT.qualitiesLabel"}}
+    <a
+      class="trait-selector"
+      data-options="armorQualities"
+    >
+      <i class="fas fa-edit"></i>
+    </a>
+  </label>
+  <ul class="qualities-list tags">
+    {{#each item.system.qualities.value as |v k|}}
+      <span class="tag {{k}}">
+        {{v}}
+      </span>
+    {{/each}}
+  </ul>
+</div>

@@ -1,0 +1,75 @@
+<h4 class="sidebar-summary">{{localize "MUTANT.armorSummary"}}</h4>
+
+<div class="inventory-details">
+  <div class="form-group">
+    <label>{{localize "MUTANT.quantityLabel"}}</label>
+    <input
+      type="Number"
+      name="system.quantity"
+      value="{{item.system.quantity}}"
+      data-dtype="Number"
+    />
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "MUTANT.availability"}}</label>
+    <select name="system.availability" data-dtype="String">
+      {{#select item.system.availability}}
+        {{#each availability as |label key|}}
+          <option value="{{key}}">
+            {{localize label}}
+          </option>
+        {{/each}}
+      {{/select}}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "MUTANT.itemEncumbrance"}}</label>
+    <input
+      type="Number"
+      name="system.encumbrance"
+      value="{{item.system.encumbrance}}"
+      data-dtype="Number"
+    />
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "MUTANT.itemCost"}}</label>
+    <input
+      type="Number"
+      name="system.cost"
+      value="{{item.system.cost}}"
+      data-dtype="Number"
+    />
+  </div>
+</div>
+
+<div class="form-group">
+  <ul class="coverages-list tags">
+    {{#each item.system.coverage.value as |v k|}}
+      <span class="tag tag_secondary {{k}}">
+        {{v}}
+      </span>
+    {{/each}}
+  </ul>
+</div>
+<div class="form-group">
+  <ul class="qualities-list tags">
+    {{#each item.system.qualities.value as |v k|}}
+      <span class="tag {{k}}">
+        {{v}}
+      </span>
+    {{/each}}
+  </ul>
+</div>
+<div class="form-group">
+  <ol class="item-tags">
+    {{#if item.system.equipped}}
+      <li class="tag">{{localize "MUTANT.equipmentEquippedLabel"}}</li>
+    {{/if}}
+    {{#if item.system.broken}}
+      <li class="tag">{{localize "MUTANT.armorBrokenLabel"}}</li>
+    {{/if}}
+  </ol>
+</div>

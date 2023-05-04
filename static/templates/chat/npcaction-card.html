@@ -1,0 +1,32 @@
+<div
+  class="mc3e chat-card action-card"
+  data-actor-id="{{actorId}}"
+  data-item-id="{{item.d}}"
+  draggable="true"
+>
+  <header class="card-header flexrow">
+    <h2>{{item.name}}</h2>
+    <img src="{{item.img}}" title="{{item.name}}" />
+  </header>
+
+  <div class="card-content">{{{data.description.value}}}</div>
+
+  {{#if data.weapon.value}}
+  <header class="card-header flexrow">
+    <h4>{{data.weapon.name}}</h4>
+  </header>
+  {{/if}}
+
+  <footer class="card-footer">
+    {{#each data.properties}}
+      <span class="tag chat-tag">
+        {{this}}
+      </span>
+    {{/each}}
+    {{#each data.traits}}
+      <span class="tag chat-tag" title="{{this.description}}">
+        {{this.label}}
+      </span>
+    {{/each}}
+  </footer>
+</div>

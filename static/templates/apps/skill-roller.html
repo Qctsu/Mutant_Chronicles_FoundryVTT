@@ -1,0 +1,271 @@
+<div class="dialog">
+  <div class="dialog-content skill-roller">
+
+		{{!-- Difficulty setting --}}
+
+		<div class="difficulty-settings">
+			<div class="label">
+				{{localize 'MUTANT.skillRollDifficultyLabel'}}
+			</div>
+
+			<div class="dialog-inputs skill-roller grid-6-columns">
+				{{#each difficulties as |difficulty index|}}
+				<button
+					class="skill-roller difficulty button {{#if difficulty.active}}active{{/if}}"
+					title="{{difficulty.tooltip}}"
+					data-difficulty={{index}}
+				>
+					D{{index}}
+				</button>
+				{{/each}}
+			</div>
+		</div>
+
+		{{!-- Attribute and Skill/Expertise Selectors --}}
+
+		{{#if isActorRoll}}
+			<div class="dialog-inputs skill-roller skill-selectors grid-2-columns">
+				<div>
+					<div class="label">
+						{{localize 'MUTANT.skillRollAttributeLabel'}}
+					</div>
+					<select class="skill-roller" name="attribute" data-dtype="String">
+						{{#select attribute}}
+							{{#each attributes as |attribute|}}
+							<option
+								value="{{attribute.key}}"
+								{{#ifEq attribute.key ../selectedAttribute}}
+									selected
+								{{/ifEq}}
+							>
+								{{attribute.name}}
+							</option>
+							{{/each}}
+						{{/select}}
+					</select>
+				</div>
+				<div>
+					{{#ifCond actorData.type '===' 'npc'}}
+						<div class="label">
+							{{localize 'MUTANT.skillExpertiseShortLabel'}}
+						</div>
+					{{else}}
+						<div class="label">
+							{{localize 'MUTANT.skillShortLabel'}}
+						</div>
+					{{/ifCond}}
+					{{#ifCond actorData.type '===' 'npc'}}
+						<select class="skill-roller" name="expertise" data-dtype="String">
+							{{#select expertise}}
+								{{#each expertiseFields as |expertise|}}
+									<option
+										value="{{expertise.key}}"
+										{{#ifEq expertise.key ../selectedExpertise}}
+											selected
+										{{/ifEq}}
+									>
+										{{expertise.name}}
+									</option>
+								{{/each}}
+							{{/select}}
+						</select>
+					{{else}}
+						<select class="skill-roller" name="skill" data-dtype="String">
+							{{#select skill}}
+								{{#each skills as |skill|}}
+									<option
+										value="{{skill.key}}"
+										{{#ifEq skill.key ../selectedSkill}}
+											selected
+										{{/ifEq}}
+									>
+										{{skill.name}}
+									</option>
+								{{/each}}
+							{{/select}}
+						</select>
+					{{/ifCond}}
+				</div>
+			</div>
+
+			{{!-- Dice Purchases and Bonuses --}}
+
+			<div class="extra-dice-hideable">
+				<div class="label">{{localize 'MUTANT.DicePurchase'}}</div>
+
+				<div class="dialog-inputs skill-roller grid-3-columns">
+
+					{{!-- FORTUNE SPENDS --}}
+					<div class="skill-roller quantity-grid">
+						<div class="quantity-header">{{localize 'MUTANT.fortune'}}</div>
+						<input type="number" min="0" max="3" step="1" value="0" data-quantity-type="spends.fortune" disabled/>
+						<div class="quantity-up">
+							<i class="fa-regular fa-square-plus"></i>
+						</div>
+						<div class="quantity-down">
+							<i class="fa-regular fa-square-minus"></i>
+						</div>
+					</div>
+
+					{{!-- MOMENTUM SPENDS --}}
+					<div class="skill-roller quantity-grid {{#if isNpc}}disable{{/if}}">
+						<div class="quantity-header">{{localize 'MUTANT.Momentum'}}</div>
+						<input id="momentum" type="number" min="0" max="3" step="1" value="0" data-quantity-type="spends.momentum" disabled/>
+						<div class="quantity-up">
+							<i class="fa-regular fa-square-plus"></i>
+						</div>
+						<div class="quantity-down">
+							<i class="fa-regular fa-square-minus"></i>
+						</div>
+					</div>
+
+					{{!-- DOOM SPENDS --}}
+					<div class="skill-roller quantity-grid">
+						<div class="quantity-header">{{localize 'MUTANT.Doom'}}</div>
+						<input id="doom" type="number" min="0" max="3" step="1" value="0" data-quantity-type="spends.doom" disabled/>
+						<div class="quantity-up">
+							<i class="fa-regular fa-square-plus"></i>
+						</div>
+						<div class="quantity-down">
+							<i class="fa-regular fa-square-minus"></i>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="label">{{localize 'MUTANT.bonus'}}</div>
+
+				<div class="dialog-inputs skill-roller grid-3-columns">
+
+					{{!-- D20 BONUSES FROM TALENTS/ETC --}}
+					<div class="skill-roller quantity-grid">
+						<div class="quantity-header">D20</div>
+						<input type="number" min="0" max="3" step="1" value="0" data-quantity-type="bonus.dice" disabled/>
+						<div class="quantity-up">
+							<i class="fa-regular fa-square-plus"></i>
+						</div>
+						<div class="quantity-down">
+							<i class="fa-regular fa-square-minus"></i>
+						</div>
+					</div>
+
+					{{!-- BONUS MOMENTUM ON SUCCESS --}}
+					<div class="skill-roller quantity-grid">
+						<div class="quantity-header">{{localize 'MUTANT.Momentum'}}</div>
+						<input type="number" min="0" step="1" value="0" data-quantity-type="bonus.momentum" disabled/>
+						<div class="quantity-up">
+							<i class="fa-regular fa-square-plus"></i>
+						</div>
+						<div class="quantity-down">
+							<i class="fa-regular fa-square-minus"></i>
+						</div>
+					</div>
+
+					{{!-- BONUS SUCCESSES ON AT LEAST ONE SUCCESS --}}
+					<div class="skill-roller quantity-grid">
+						<div class="quantity-header">{{localize 'MUTANT.skillRollSuccess'}}</div>
+						<input type="number" min="0" step="1" value="0" data-quantity-type="bonus.successes" disabled/>
+						<div class="quantity-up">
+							<i class="fa-regular fa-square-plus"></i>
+						</div>
+						<div class="quantity-down">
+							<i class="fa-regular fa-square-minus"></i>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		{{else}} {{!-- #if isActorRoll --}}
+
+			{{!-- Not an Actor roll, so display the generic interface --}}
+
+			<div class="dialog-inputs skill-roller grid-3-columns">
+
+				{{!-- TARGET NUMBER --}}
+				<div class="skill-roller quantity-grid">
+					<div class="quantity-header">TN</div>
+					<input id="skill-tn" type="number" min="0" step="1" value="{{rollData.skill.tn}}" data-quantity-type="skill.tn" disabled/>
+					<div class="quantity-up">
+						<i class="fa-regular fa-square-plus"></i>
+					</div>
+					<div class="quantity-down">
+						<i class="fa-regular fa-square-minus"></i>
+					</div>
+				</div>
+
+				{{!-- FOCUS POINTS --}}
+				<div class="skill-roller quantity-grid">
+					<div class="quantity-header">{{localize 'MUTANT.focus'}}</div>
+					<input id="skill-focus" type="number" min="0" step="1" value="{{rollData.skill.focus}}" data-quantity-type="skill.focus" disabled/>
+					<div class="quantity-up">
+						<i class="fa-regular fa-square-plus"></i>
+					</div>
+					<div class="quantity-down">
+						<i class="fa-regular fa-square-minus"></i>
+					</div>
+				</div>
+
+				{{!-- COMPLICATION THRESHOLD --}}
+				<div class="skill-roller quantity-grid">
+					<div class="quantity-header">{{localize 'MUTANT.complicationShort'}}</div>
+					<input id="skill-complication" type="number" min="0" step="1" value="{{rollData.skill.complication}}" data-quantity-type="skill.complication" disabled/>
+					<div class="quantity-up">
+						<i class="fa-regular fa-square-plus"></i>
+					</div>
+					<div class="quantity-down">
+						<i class="fa-regular fa-square-minus"></i>
+					</div>
+				</div>
+
+			</div>
+
+		{{/if}} {{!-- if isActorRoll --}}
+
+			<hr />
+
+			<div class="test-details">
+				{{rollData.difficulty.display}}
+			</div>
+
+			<div class="difficulty-increased">
+				{{#if difficultyIncreased}}
+					{{localize 'MUTANT.skillRollDifficultyIncreased'}}
+				{{else}}
+					&nbsp;
+				{{/if}}
+			</div>
+
+		{{!-- Show the dice that will be rolled --}}
+
+		<div
+			class="skill-roller grid-5-columns"
+			title="Select the amount of dice to roll"
+		>
+			{{#each dice as |die index|}}
+				<div
+					data-dice-number="{{index}}"
+					{{#if die.active}}
+						class="dice selected"
+					{{else}}
+						class="dice unselected"
+					{{/if}}
+				>
+				{{#if die.active}}
+					?
+				{{else}}
+					&nbsp;
+				{{/if}}
+				</div>
+			{{/each}}
+		</div>
+
+		{{!-- Submit button --}}
+
+		<div class="dialog-inputs">
+			<button class="roll-skill-check">
+				{{localize 'MUTANT.RollDice'}}
+			</button>
+		</div>
+	</div>
+</div>

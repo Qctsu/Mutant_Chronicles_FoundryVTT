@@ -29,7 +29,7 @@ Following things are greatly appreciated and speed up the resolution time:
 
 ## Community Contributions
 
-<!-- [![pipeline status](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/badges/master/pipeline.svg)](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/-/commits/master) -->
+<!-- [![pipeline status](https://github.com/qctsu/mutant_chronicles_foundryVTT/badges/master/pipeline.svg)](https://github.com/qctsu/mutant_chronicles_foundryVTT/-/commits/master) -->
 
 Code and content contributions are welcome. Please feel free to submit issues to the issue tracker or submit merge requests for code changes.
 

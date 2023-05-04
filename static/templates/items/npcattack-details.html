@@ -1,0 +1,111 @@
+<div class="form-group">
+  <label>{{localize "MUTANT.attackTypeLabel"}}</label>
+  <select name="system.attackType" data-dtype="String">
+    {{#select item.system.attackType}}
+      {{#each attackTypes as |name type|}}
+        <option value="{{type}}">
+          {{name}}
+        </option>
+      {{/each}}
+    {{/select}}
+  </select>
+</div>
+
+<div class="form-group">
+  <label>{{localize "MUTANT.damageTypeLabel"}}</label>
+
+  {{#ifEq item.system.attackType "threaten"}}
+
+    <select name="system.damage.type" data-dtype="String">
+      {{#select damageTypes.mental}}
+        <option value="mental" selected>
+          {{localize "MUTANT.damageTypes.mental"}}
+        </option>
+      {{/select}}
+    </select>
+
+  {{else}}
+
+    <select name="system.damage.type" data-dtype="String">
+      {{#select damageTypes.physical}}
+        <option value="physical" selected>
+          {{localize "MUTANT.damageTypes.physical"}}
+        </option>
+      {{/select}}
+    </select>
+
+  {{/ifEq}}
+</div>
+
+<div class="form-group">
+  {{#ifEq item.system.attackType "melee"}}
+
+    <label>{{localize "MUTANT.attackReachLabel"}}</label>
+    <select name="system.range" data-dtype="Number">
+      {{#select item.system.range}}
+        {{#each weaponReaches as |name reach|}}
+          <option value="{{reach}}">
+            {{name}}
+          </option>
+        {{/each}}
+      {{/select}}
+    </select>
+
+  {{else}}
+
+    <label>{{localize "MUTANT.attackRangeLabel"}}</label>
+    <select name="system.range" data-dtype="String">
+      {{#select item.system.range}}
+        {{#each weaponRanges as |name range|}}
+          <option value="{{range}}">
+            {{name}}
+          </option>
+        {{/each}}
+      {{/select}}
+    </select>
+
+  {{/ifEq}}
+</div>
+
+<ol class="form-list">
+  <div class="form-group">
+    <label title="{{localize MUTANT.attackDamageTitle}}">
+      {{localize "MUTANT.attackDamageLabel"}}
+    </label>
+    <div class="details-container-three-columns">
+      <select name="system.damage.dice" data-dtype="Number">
+        {{#select item.system.damage.dice}}
+          {{#each damageDice as |name type|}}
+            <option value="{{type}}">
+              {{name}}
+            </option>
+          {{/each}}
+        {{/select}}
+      </select>
+      <div class="combat-dice"></div>
+    </div>
+  </div>
+</ol>
+
+<div class="form-group-stacked">
+  <label for="system.qualities.value">
+    {{localize "MUTANT.qualitiesLabel"}}
+    <a
+      class="trait-selector"
+      data-options="weaponQualities"
+      data-has-values="true"
+      data-allow-empty-values="true"
+      ><i class="fas fa-edit"></i
+    ></a>
+  </label>
+  <ul class="qualities-list tags">
+    {{#each item.system.qualities.value as |v k|}}
+      <span class="tag {{k}}">
+        {{v.label}}
+        {{#if v.value}}
+          ({{v.value}})
+        {{/if}}
+      </span>
+    {{/each}}
+  </ul>
+</div>

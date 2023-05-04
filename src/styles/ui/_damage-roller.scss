@@ -1,0 +1,62 @@
+.damage-roller {
+	margin: 4px;
+
+	select {
+		text-align: center;
+		width: calc(100% - 8px);
+		font-size: 14px;
+		font-family: $serif;
+		font-weight: 500;
+		color: white;
+		position: relative;
+		background-color: var(--alt);
+		line-height: 1;
+		cursor: pointer;
+		padding: 4px 18px 3px 5px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		text-overflow: ellipsis;
+		height: auto;
+		border: 1px solid #53422a;
+		margin: 4px;
+
+		&:hover {
+			@include input-glow;
+			color: white;
+			cursor: pointer;
+		}
+
+		option {
+			background-color: var(--alt);
+		}
+	}
+
+	.damage-type {
+		padding: 0px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+
+		&.active {
+			color: red;
+		}
+
+		&.button {
+			border-radius: 15px;
+			font-weight: 600;
+		}
+	}
+
+	.label {
+		text-align: center;
+		color: white;
+		background-color: #40450a;
+		text-transform: uppercase;
+	}
+
+	.disable-entry {
+		opacity: 0.60;
+		pointer-events: none;
+	}
+}

@@ -18,4 +18,4 @@
 
 - Maybe this all things will work xD
 
-<!-- [v1.0.0]: https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/compare/v1.0.0...HEAD -->
+<!-- [v1.0.0]: https://github.com/qctsu/mutant_chronicles_foundryVTT/compare/v1.0.0...HEAD -->

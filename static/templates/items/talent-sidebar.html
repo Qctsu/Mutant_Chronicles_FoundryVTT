@@ -1,0 +1,37 @@
+<h4 class="sidebar-summary">{{localize "MUTANT.talentSummary"}}</h4>
+
+<span class="item-summary">
+  {{lookup talentTypes item.system.talentType }}
+</span>
+<br />
+{{#if item.system.prerequisites}}
+  <span class="item-summary">
+    {{localize "MUTANT.talentRequiresLabel"}}
+    {{item.system.prerequisites}}
+  </span>
+{{/if}}
+
+<ol class="item-tags tags">
+  {{#each item.system.quality.value as |v|}}
+   <li class="tag">{{v}}</li>
+  {{/each}}
+  {{#if item.system.rank.value}}
+    <li class="tag">
+      {{localize "MUTANT.talentRankLabel"}}
+      {{item.system.rank.value}}
+    </li>
+  {{/if}}
+  {{#if item.system.actionType}}
+    <li class="tag">
+      {{item.system.actionType}}
+    </li>
+  {{/if}}
+</ol>
+
+{{#if itemTags.length}}
+  <ol class="item-tags">
+    {{#each itemTags}}
+      <li class="tag">{{this}}</li>
+    {{/each}}
+  </ol>
+{{/if}}

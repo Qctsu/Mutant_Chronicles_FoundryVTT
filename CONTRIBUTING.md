@@ -34,7 +34,7 @@ You can find out where the `foundrydata` folder is located in the Configuration 
 
 ## Testing
 
-<!-- [![pipeline status](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/badges/master/pipeline.svg)](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/-/commits/master)
+<!-- [![pipeline status](https://github.com/qctsu/mutant_chronicles_foundryVTT/badges/master/pipeline.svg)](https://github.com/qctsu/mutant_chronicles_foundryVTT/-/commits/master)
 -->
 Please run your code changes in a Mutant Chronicles (3rd Edition) World before commiting to GitHub.
 
@@ -45,8 +45,8 @@ Before major code commits, ensure all standard entities remain functional:
 
 ## Submitting changes
 
-1. Open an [Issue](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/-/issues/new) to document the fix or the feature proposed if no other exists.
-1. **Create merge request and branch** from your [Issue](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/-/issues/).
+1. Open an [Issue](https://github.com/qctsu/mutant_chronicles_foundryVTT/-/issues/new) to document the fix or the feature proposed if no other exists.
+1. **Create merge request and branch** from your [Issue](https://github.com/qctsu/mutant_chronicles_foundryVTT/-/issues/).
 1. **We require a [DCO](https://developercertificate.org/) on each commit**. We cannot accept any merge requests that are not submitted with a DCO.
 1. Larger PRs should be broken into logical commits. Smaller PRs should be submitted as a single commit.
 1. Run the bundled [Pre-commit Checks] before opening a Merge Request.

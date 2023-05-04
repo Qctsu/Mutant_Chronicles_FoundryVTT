@@ -1,0 +1,60 @@
+{{#if item}}
+  <h2>{{item.name}}</h2>
+  <h3>{{rollData.title}}</h4>
+{{else}}
+  <h2>{{rollData.title}}</h2>
+{{/if}}
+<h4>
+  Base {{rollData.base.numDice}},
+  Attribute {{rollData.bonus.attribute}},
+  Talent {{rollData.bonus.talent}},
+  Reloads {{rollData.bonus.reloads}}
+</h4>
+<div class="roll-card">
+  {{#each results.rolls as |roll r|}}
+  <span class="roll-list-entry roll d6-combat{{roll.result}}" id="{{r}}">{{{roll.display}}}</span>
+  {{/each}}
+</div>
+<div class="roll-outcomes">
+  <label>{{localize 'MUTANT.numberOfDice'}}: </label>{{rollData.numDice}}
+  {{#if results.location}}
+    <br />
+    <label>{{localize 'MUTANT.hitLocation'}}: </label>{{results.location}}
+  {{/if}}
+  {{#ifCond rollData.spends.momentum '>' 0}}
+    <br />
+    <label>{{localize 'MUTANT.momentum'}}: </label>{{rollData.spends.momentum}}
+  {{/ifCond}}
+  {{#ifCond rollData.spends.doom '>' 0}}
+    <br />
+    <label>{{localize 'MUTANT.Doom'}}: </label>{{rollData.spends.doom}}
+  {{/ifCond}}
+  {{#ifCond results.effects '>' 0}}
+    <br />
+    <label>{{localize 'MUTANT.effectsLabel'}}: </label>{{results.effects}}
+  {{/ifCond}}
+</div>
+<div class="roll-complications">
+  <h2>
+    {{results.total}}
+    {{rollData.damage.type}}
+    {{localize "MUTANT.Damage"}}
+  </h2>
+</div>
+{{#if rollData.itemData}}
+  <footer class="card-footer item-properties tags">
+    {{#each rollData.itemData.properties}}
+      <span class="tag chat-tag chat-tag_secondary">
+        {{this}}
+      </span>
+    {{/each}}
+    {{#each rollData.itemData.qualities}}
+      <span class="tag chat-tag" title="{{this.description}}">
+        {{this.label}}
+        {{#if this.value}}
+          {{this.value}}
+        {{/if}}
+      </span>
+    {{/each}}
+  </footer>
+{{/if}}

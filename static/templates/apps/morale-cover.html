@@ -1,0 +1,30 @@
+<form class="soak-form">
+  <div class="form-group">
+    <label>{{localize "MUTANT.soakCover"}}</label>
+    <div class="form-fields">
+      <select name="flags.mc3e.soak.cover">
+        {{#select object.flags.mc3e.soak.cover}}
+          <option value="">{{localize "MUTANT.soakNone"}}</option>
+          <option value="light">{{localize "MUTANT.soakLight"}}</option>
+          <option value="heavy">{{localize "MUTANT.soakHeavy"}}</option>
+        {{/select}}
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "MUTANT.soakMorale"}}</label>
+    <div class="form-fields">
+      <select name="flags.mc3e.soak.morale">
+        {{#select object.flags.mc3e.soak.morale}}
+          <option value="">{{localize "MUTANT.soakNone"}}</option>
+          <option value="light">{{localize "MUTANT.soakLight"}}</option>
+          <option value="heavy">{{localize "MUTANT.soakHeavy"}}</option>
+        {{/select}}
+      </select>
+    </div>
+  </div>
+  <button type="submit" name="submit" value="1">
+    <i class="far fa-save"></i>Update
+  </button>
+</form>

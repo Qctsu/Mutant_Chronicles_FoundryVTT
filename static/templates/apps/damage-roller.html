@@ -1,0 +1,154 @@
+<div class="dialog">
+  <div class="dialog-content damage-roller">
+
+		<div class="label">
+			{{localize 'MUTANT.damageRollAttackType'}}
+		</div>
+
+		{{!-- SOAK TYPE OPTIONS --}}
+		<div class="grid-3-columns">
+			{{#each damageTypes as |damageType index|}}
+			<button
+				class="damage-roller damage-type button {{#if damageType.active}}active{{/if}}"
+				title="{{damageType.tooltip}}"
+				data-damage-type={{damageType.type}}
+			>
+				{{damageType.name}}
+			</button>
+			{{/each}}
+		</div>
+
+		{{#if itemData}}
+			<div class="label">
+				{{itemData.name}}
+			</div>
+		{{/if}}
+
+		<div class="dialog-inputs damage-roller grid-2-columns">
+
+			{{!-- BASE DICE QUANTITY --}}
+			<div class="damage-roller quantity-grid {{#if itemData}}disable-entry{{/if}}">
+				<div class="quantity-header">
+					{{localize 'MUTANT.CombatDice'}}
+				</div>
+				<input id="numDice" type="number" min="1" value="{{rollData.base.numDice}}" data-quantity-type="base.numDice" disabled/>
+				<div class="quantity-up">
+					<i class="fa-regular fa-square-plus"></i>
+				</div>
+				<div class="quantity-down">
+					<i class="fa-regular fa-square-minus"></i>
+				</div>
+			</div>
+
+			{{!-- RELOAD QUANTITY --}}
+			<div class="damage-roller quantity-grid reload-quantity disable-entry">
+				<div class="quantity-header">{{localize "MUTANT.damageRollLoadSpendLabel"}}</div>
+				<input id="talent" type="number" min="0" step="1" value="0" data-quantity-type="bonus.reloads" disabled/>
+				<div class="quantity-up">
+					<i class="fa-regular fa-square-plus"></i>
+				</div>
+				<div class="quantity-down">
+					<i class="fa-regular fa-square-minus"></i>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="dialog-inputs reload-choice {{#if disableReloads}}disable-entry{{/if}}">
+			<select class="damage-roller reload-select" name="reload" data-dtype="String">
+				<option
+					value=""
+				>
+					{{#if reloadsAvailable}}
+						--- {{localize 'MUTANT.SelectAReloadToUse'}} ---
+					{{else}}
+						--- {{localize 'MUTANT.NoReloadsAvailable'}} ---
+					{{/if}}
+				</option>
+				{{#select reloadId}}
+					{{#each reloads as |reload|}}
+					<option
+						value="{{reload.name}}"
+					>
+						{{reload.name}} ({{reload.uses}}/{{reload.max}} {{localize 'MUTANT.available'}})
+					</option>
+					{{/each}}
+				{{/select}}
+			</select>
+		</div>
+
+		{{#if itemData}}
+			<div class="label">
+				{{localize 'MUTANT.BonusDice'}}
+			</div>
+
+			<div class="grid-2-columns">
+
+				{{!-- OTHER DICE --}}
+				<div class="damage-roller quantity-grid">
+					<div class="quantity-header">{{localize "MUTANT.other"}}</div>
+					<input id="talent" type="number" min="0" step="1" value="0" data-quantity-type="bonus.other" disabled/>
+					<div class="quantity-up">
+						<i class="fa-regular fa-square-plus"></i>
+					</div>
+					<div class="quantity-down">
+						<i class="fa-regular fa-square-minus"></i>
+					</div>
+				</div>
+
+				{{!-- TALENT DICE --}}
+				<div class="damage-roller quantity-grid">
+					<div class="quantity-header">{{localize "MUTANT.damageRollTalentSpendLabel"}}</div>
+					<input id="talent" type="number" min="0" step="1" value="0" data-quantity-type="bonus.talent" disabled/>
+					<div class="quantity-up">
+						<i class="fa-regular fa-square-plus"></i>
+					</div>
+					<div class="quantity-down">
+						<i class="fa-regular fa-square-minus"></i>
+					</div>
+				</div>
+
+			</div>
+		{{/if}}
+
+		<div class="label">
+			{{localize 'MUTANT.BonusDamage'}}
+		</div>
+
+		<div class="grid-2-columns">
+
+			{{!-- DOOM SPENDS --}}
+			<div class="damage-roller quantity-grid {{#if isPc}}disable-entry{{/if}}">
+				<div class="quantity-header">{{localize "MUTANT.Doom"}}</div>
+				<input id="doom" type="number" min="0" step="1" value="0" data-quantity-type="spends.doom" disabled/>
+				<div class="quantity-up">
+					<i class="fa-regular fa-square-plus"></i>
+				</div>
+				<div class="quantity-down">
+					<i class="fa-regular fa-square-minus"></i>
+				</div>
+			</div>
+
+			{{!-- MOMENTUM SPENDS --}}
+			<div class="damage-roller quantity-grid {{#if isNpc}}disable-entry{{/if}}">
+				<div class="quantity-header">{{localize "MUTANT.Momentum"}}</div>
+				<input id="momentum" type="number" min="0" step="1" value="0" data-quantity-type="spends.momentum" disabled/>
+				<div class="quantity-up">
+					<i class="fa-regular fa-square-plus"></i>
+				</div>
+				<div class="quantity-down">
+					<i class="fa-regular fa-square-minus"></i>
+				</div>
+			</div>
+
+		</div>
+
+		{{!-- Submit button --}}
+		<div class="dialog-inputs">
+			<button class="roll-dice">
+				{{localize 'MUTANT.RollDice'}}
+			</button>
+		</div>
+
+	</div>
+</div>

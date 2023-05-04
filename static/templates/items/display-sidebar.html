@@ -1,0 +1,17 @@
+<h4 class="sidebar-summary">{{localize "MUTANT.displaySummary"}}</h4>
+
+<div class="display-details">
+  <ol class="qualities-list tags">
+    {{#if displayQualities}}
+      {{#each item.system.qualities.value}}
+        {{#if this.value}}
+          <li class="tag">
+            {{this.label}}({{this.value}})
+          </li>
+        {{else}}
+          <li class="tag">{{this.label}}</li>
+        {{/if}}
+      {{/each}}
+    {{/if}}
+  </ol>
+</div>

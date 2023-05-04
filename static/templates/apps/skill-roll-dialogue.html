@@ -1,0 +1,137 @@
+<ol class="form-list">
+  <div class="dialog-inputs">
+    <div class="form-group">
+      <label>{{localize "MUTANT.skillRollDifficultyLabel"}}</label>
+      <div class="DiceMods">
+        <select
+          name="difficulty"
+          data-dtype="String"
+          title="{{modifiers.difficultyTooltip}}"
+        >
+          {{#select modifiers.prefilledDifficulty}}
+            {{#each modifiers.difficulty as |name type|}}
+              <option value="{{type}}">{{name}}</option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </div>
+    {{#ifEq modifiers.actorType "npc"}}
+    <div class="form-group">
+      <label>{{localize "MUTANT.npcSkillRollAttributeLabel"}}</label>
+      <div class="diceMods">
+        <select name="npcAttributes" data-dtype="String">
+          {{#select modifiers.prefilledAttribute}}
+            {{#each modifiers.npcAttributes as |name type|}}
+              <option value="{{type}}">{{name}}</option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </div>
+    {{/ifEq}}
+    {{#ifEq modifiers.actorType "character"}}
+      <script>
+          var checkbox = document.querySelector("input[name=diceModifierAssist");
+
+          checkbox.addEventListener('change', function() {
+              if (this.checked) {
+                document.getElementById('hidden-on-assist').style.display = 'none';
+                //document.getElementById('hidden-on-assist-1').style.display = 'none';
+                //document.getElementById('hidden-on-assist-2').style.display = 'none';
+              } else {
+                document.getElementById('hidden-on-assist').style.display = 'block';
+                //document.getElementById('hidden-on-assist-1').style.display = 'block';
+                //document.getElementById('hidden-on-assist-2').style.display = 'block';
+              }
+          });
+      </script>
+      <div class="form-group">
+        <div class="assist">
+        <label>{{localize "MUTANT.skillRollAssistLabel"}}</label>
+          <input
+            type="checkbox"
+            name="diceModifierAssist"
+            value=""
+            data-dtype="Boolean"
+            {{checked rollData.diceModifierAssist}}
+          />
+        </div>
+      </div>
+      <br />
+      <div id="hidden-on-assist">
+      <div class="form-group">
+        <label>{{localize "MUTANT.damageRollDoomSpendLabel"}}</label>
+        <div class="diceMods">
+          <input
+            type="doom"
+            name="diceModifierDoom"
+            value=""
+            data-dtype="Number"
+            id="dice-modifier-value"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize "MUTANT.damageRollMomentumSpendLabel"}}</label>
+        <div class="diceMods">
+          <input
+            type="momentum"
+            name="diceModifierMomentum"
+            value=""
+            data-dtype="Number"
+            id="dice-modifier-value"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{localize "MUTANT.fortuneSpendLabel"}}</label>
+        <div class="diceMods">
+          <input name="successModifier" value="" />
+        </div>
+      </div>
+      <div class="form-group">
+          <label title="{{localize MUTANT.d20BonusTitle}}">
+            {{localize "MUTANT.d20BonusLabel"}}
+          </label>
+        <div class="diceMods">
+          <input name="rollBonusModifier" value="" />
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+        <label title={{localize "MUTANT.momentumBonusTitle"}}>
+          {{localize "MUTANT.momentumBonusLabel"}}
+        </label>
+      <div class="diceMods">
+        +<input name="momentumBonusModifier" value="" />
+      </div>
+    </div>
+    {{else ifEq modifiers.actorType "npc"}}
+      <div class="form-group">
+        <label>{{localize "MUTANT.damageRollDoomSpendLabel"}}</label>
+        <div class="diceMods">
+          <input
+            type=""
+            name="diceModifierDoom"
+            value=""
+            data-dtype="Number"
+            id="dice-modifier-value"
+          />
+        </div>
+      </div>
+      <div class="form group">
+          <label>
+            {{localize "MUTANT.fortuneSpendLabel"}}
+            <i
+              class="fas fa-info-circle"
+              title="{{localize "MUTANT.doomConversionTitle"}}"
+            ></i>
+          </label>
+          <div class="diceMods">
+              <input name="successModifier" value="" />
+          </div>
+      </div>
+    {{/ifEq}}
+  </div>
+</ol>

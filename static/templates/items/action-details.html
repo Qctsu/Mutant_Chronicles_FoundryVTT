@@ -1,0 +1,40 @@
+<div class="form-group">
+  <label>{{localize "MUTANT.actionTypeLabel"}}</label>
+  <select name="system.actionType" data-dtype="String">
+    {{#select item.system.actionType}}
+      {{#each actionTypes as |name type|}}
+        <option value="{{type}}">
+          {{name}}
+        </option>
+      {{/each}}
+    {{/select}}
+  </select>
+</div>
+
+<div class="form-group">
+  <label>{{localize "MUTANT.actionCountLabel"}}</label>
+  <select name="system.actionCount" data-dtype="String">
+    {{#select item.system.actionCount}}
+      <option value=""></option>
+      {{#each actionCounts as |name type|}}
+        <option value="{{type}}">
+          {{name}}
+        </option>
+      {{/each}}
+    {{/select}}
+  </select>
+</div>
+
+<div class="form-group">
+  <label>{{localize "MUTANT.actionCategoryLabel"}}</label>
+  <select name="system.actionCategory" data-dtype="String">
+    {{#select item.system.actionCategory}}
+      <option value=""></option>
+      {{#each actionCategories as |name type|}}
+        <option value="{{type}}">
+          {{name}}
+        </option>
+      {{/each}}
+    {{/select}}
+  </select>
+</div>

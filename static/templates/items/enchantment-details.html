@@ -1,0 +1,303 @@
+<div class="form-group">
+  <label>{{localize "MUTANT.enchantmentTypeLabel"}}</label>
+  <select name="system.enchantmentType" data-dtype="String">
+    {{#select item.system.enchantmentType}}
+      {{#each enchantmentTypes as |name type|}}
+        <option value="{{type}}">
+          {{name}}
+        </option>
+      {{/each}}
+    {{/select}}
+  </select>
+</div>
+
+<div class="form-group">
+  <div class="form-group">
+    <label>{{localize "MUTANT.difficultyLabel"}}</label>
+    <select name="system.difficulty" data-dtype="String">
+      {{#select item.system.difficulty}}
+        {{#each difficulty as |label key|}}
+          <option value="{{key}}">
+            {{localize label}}
+          </option>
+        {{/each}}
+      {{/select}}
+    </select>
+  </div>
+</div>
+
+{{#ifCond item.system.enchantmentType '!=' 'reinforcedFabric' }}
+
+  {{#ifEq item.system.enchantmentType 'talisman'}}
+    <ol class="form-list">
+      <div class="form-group">
+        <label>{{localize "MUTANT.enchantmentTalismanLabel"}}</label>
+        <select name="system.traits.talismanType" data-dtype="String">
+          {{#select item.system.traits.talismanType}}
+            {{#each talismanTypes as |label key|}}
+              <option value="{{key}}">
+                {{localize label}}
+              </option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </ol>
+    <ol class="form-list">
+      <div class="form-group">
+        <label>{{localize "MUTANT.enchantmentHindranceLabel"}}</label>
+        <input
+          type="Text"
+          name="system.traits.hindrance"
+          value="{{item.system.traits.hindrance}}"
+          data-dtype="Text"
+        />
+      </div>
+    </ol>
+  {{/ifEq}}
+
+  {{#ifEq item.system.enchantmentType 'lotusPollen'}}
+    <ol class="form-list">
+      <div class="form-group">
+        <label>{{localize "MUTANT.lotusPollenColorLabel"}}</label>
+        <select name="system.traits.lotusPollenColor" data-dtype="String">
+          {{#select item.system.traits.lotusPollenColor}}
+            {{#each lotusPollenColors as |label key|}}
+              <option value="{{key}}">
+                {{localize label}}
+              </option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </ol>
+
+    <ol class="form-list">
+      <div class="form-group">
+        <label>{{localize "MUTANT.lotusPollenUseLabel"}}</label>
+        <select name="system.traits.lotusPollenUse" data-dtype="String">
+          {{#select item.system.traits.lotusPollenUses}}
+            {{#each lotusPollenUses as |label key|}}
+              <option value="{{key}}">
+                {{localize label}}
+              </option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </ol>
+
+    <ol class="form-list">
+      <div class="form-group">
+        <label>{{localize "MUTANT.lotusPollenFormLabel"}}</label>
+        <select name="system.traits.lotusPollenForm" data-dtype="String">
+          {{#select item.system.traits.lotusPollenForm}}
+            {{#each lotusPollenForms as |label key|}}
+              <option value="{{key}}">
+                {{localize label}}
+              </option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </ol>
+  {{/ifEq}}
+
+  {{#ifEq item.system.enchantmentType 'burningLiquid'}}
+    <ol class="form-list">
+      <div class="form-group">
+        <label>{{localize "MUTANT.enchantmentVolatilityLabel"}}</label>
+        <select name="system.traits.volatility" data-dtype="String">
+          {{#select item.system.traits.volatility}}
+            {{#each volatilities as |label key|}}
+              <option value="{{key}}">
+                {{localize label}}
+              </option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </ol>
+  {{/ifEq}}
+
+  {{#ifEq item.system.enchantmentType 'blindingPowder'}}
+    <ol class="form-list">
+      <div class="form-group">
+        <label>{{localize "MUTANT.enchantmentStrengthLabel"}}</label>
+        <select name="system.traits.strength" data-dtype="String">
+          {{#select item.system.traits.strength}}
+            {{#each blindingStrengths as |label key|}}
+              <option value="{{key}}">
+                {{localize label}}
+              </option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </ol>
+  {{/ifEq}}
+
+  {{#ifEq item.system.enchantmentType 'explodingPowder'}}
+    <ol class="form-list">
+      <div class="form-group">
+        <label>{{localize "MUTANT.enchantmentItemLabel"}}</label>
+        <select name="system.traits.explodingItem" data-dtype="String">
+          {{#select item.system.traits.explodingItem}}
+            {{#each explodingItems as |label key|}}
+              <option value="{{key}}">
+                {{localize label}}
+              </option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </ol>
+
+    <ol class="form-list">
+      <div class="form-group">
+        <label>{{localize "MUTANT.enchantmentStrengthLabel"}}</label>
+        <select name="system.traits.strength" data-dtype="String">
+          {{#select item.system.traits.strength}}
+            {{#each enchantmentStrengths as |label key|}}
+              <option value="{{key}}">
+                {{localize label}}
+              </option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </ol>
+
+  {{/ifEq}}
+
+  {{#ifEq item.system.enchantmentType 'upasGlass'}}
+    <ol class="form-list">
+      <div class="form-group">
+        <label>{{localize "MUTANT.upasGlassSizeLabel"}}</label>
+        <select name="system.traits.size" data-dtype="String">
+          {{#select item.system.traits.size}}
+            {{#each upasGlassSizes as |label key|}}
+              <option value="{{key}}">
+                {{localize label}}
+              </option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+    </ol>
+  {{/ifEq}}
+
+  {{#ifCond item.system.enchantmentType '!=' 'talisman'}}
+    {{#ifCond item.system.enchantmentType '!=' 'lotusPollen'}}
+      <ol class="form-list">
+        <div class="form-group">
+          {{#ifEq item.system.enchantmentType 'upasGlass'}}
+            <label>{{localize "MUTANT.enchantmentCoverLabel"}}</label>
+          {{else}}
+            <label>{{localize "MUTANT.enchantmentDamageLabel"}}</label>
+          {{/ifEq}}
+          <div class="details-container-three-columns">
+            <select name="system.damage.dice" data-dtype="Number">
+              {{#select item.system.damage.dice}}
+                {{#each damageDice as |name type|}}
+                  <option value="{{type}}">
+                    {{name}}
+                  </option>
+                {{/each}}
+              {{/select}}
+            </select>
+            <div class="combat-dice"></div>
+          </div>
+        </div>
+      </ol>
+    {{/ifCond}}
+  {{/ifCond}}
+
+  <div class="form-group">
+    <label>{{localize "MUTANT.kitUsesAvailableLabel"}}</label>
+    <input
+      type="Number"
+      name="system.uses.value"
+      value="{{item.system.uses.value}}"
+      data-dtype="Number"
+    />
+  </div>
+
+  {{#ifCond item.system.enchantmentType '!=' 'talisman'}}
+    {{#ifCond item.system.enchantmentType '!=' 'lotusPollen'}}
+      <ol class="form-list">
+        <div class="form-group-stacked">
+          <label for="system.effects.value">
+            {{localize "MUTANT.effectsLabel"}}
+            <a
+              class="trait-selector"
+              data-options="weaponQualities"
+              data-has-values="true"
+              data-allow-empty-values="true"
+            >
+              <i class="fas fa-edit"></i>
+            </a>
+          </label>
+          <ul class="qualities-list tags">
+            {{#each item.system.effects.value as |v k|}}
+              <span class="tag {{k}}">
+                {{v.label}}
+                {{#if v.value}}
+                  ({{v.value}})
+                {{/if}}
+              </span>
+            {{/each}}
+          </ul>
+        </div>
+      </ol>
+   {{/ifCond}}
+  {{/ifCond}}
+
+{{else}}
+
+  <ol class="form-list">
+    <div class="form-group">
+      <label>{{localize "MUTANT.enchantmentIngredientsLabel"}}</label>
+      <select name="system.traits.ingredients" data-dtype="String">
+        {{#select item.system.traits.ingredients}}
+          {{#each ingredient as |label key|}}
+            <option value="{{key}}">
+              {{localize label}}
+            </option>
+          {{/each}}
+        {{/select}}
+      </select>
+    </div>
+  </ol>
+
+  <ol class="form-list">
+    <div class="form-group">
+      <label>{{localize "MUTANT.kitUsesAvailableLabel"}}</label>
+      <input
+        type="Number"
+        name="system.uses.value"
+        value="{{item.system.uses.value}}"
+        data-dtype="Number"
+      />
+    </div>
+  <ol class="form-list">
+
+  <ol class="form-list">
+    <div class="form-group-stacked">
+      <label for="system.damage.hitLocation">
+        {{localize "MUTANT.enchantmentCoverageLabel"}}
+        <a class="trait-selector" data-options="coverageTypes"
+          ><i class="fas fa-edit"></i
+        ></a>
+      </label>
+      <ul class="coverages-list co-value co-large">
+        {{#each item.system.damage.hitLocation as |v k|}}
+          <span class="tag {{k}}">
+            {{v}}
+          </span>
+        {{/each}}
+      </ul>
+    </div>
+  </ol>
+
+{{/ifCond}}
