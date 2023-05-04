@@ -23,7 +23,7 @@
     "main.bundle.js"
   ],
   "styles": [
-    "styles/mc3e.css"
+    "styles/mc3e.scss"
   ],
   "scripts": [],
   "packs": [
