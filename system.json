@@ -6,8 +6,7 @@
   "schema": "0.22122701",
   "compatibility": {
     "minimum": "10",
-    "verified": "10",
-    "maximum": "10"
+    "verified": "10"
   },
   "authors": [
     {
