@@ -23,13 +23,13 @@ Following things are greatly appreciated and speed up the resolution time:
 3. What were you doing.
 4. How to replicate the issue.
 5. Version of the following
-6. FoundryVTT.
-7. Mutant Chronicles RPG (3rd Edition).
-8. Browser and its version.
+   1. FoundryVTT.
+   2. Mutant Chronicles RPG (3rd Edition).
+   3. Browser and its version.
 
 ## Community Contributions
 
-<!-- [![pipeline status](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/badges/master/pipeline.svg)](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/-/commits/master) -->
+<!-- [![pipeline status](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/badges/master/pipeline.svg)](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/-/commits/master) -->
 
 Code and content contributions are welcome. Please feel free to submit issues to the issue tracker or submit merge requests for code changes.
 

@@ -1,12 +1,12 @@
 # How to contribute
 
-Thank you very much for having a look at the project best practices, if you have any question, please don't hesitate to contact us (KayhosRaven#1642 and eeyun#0890) on the [CONAN 2D20 Discord](https://discord.gg/hhbpSrtAu9) or on the GitLab repo support email [incoming+fvtt-modiphius-foundryvtt-conan2d20-19641366-issue-@incoming.gitlab.com](mailto:incoming+fvtt-modiphius-foundryvtt-conan2d20-19641366-issue-@incoming.gitlab.com).
+Thank you very much for having a look at the project best practices, if you have any question, please don't hesitate to contact us (KayhosRaven#1642 and eeyun#0890) on the [MUTANT 2D20 Discord](https://discord.gg/hhbpSrtAu9) or on the GitLab repo support email [incoming+fvtt-modiphius-foundryvtt-mc3e-19641366-issue-@incoming.gitlab.com](mailto:incoming+fvtt-modiphius-foundryvtt-mc3e-19641366-issue-@incoming.gitlab.com).
 
 ## Installing the repo
 
-Conan 2D20 is under active development, with rapid and dramatic changes. It currently depends on unmerged changes to Nick East's [Foundry Project Creator Types](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-typesTo) so we're consuming a fork (We're on the bleeding edge here apparently!).
+Mutant 2D20 is under active development, with rapid and dramatic changes. It currently depends on unmerged changes to Nick East's [Foundry Project Creator Types](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-typesTo) so we're consuming a fork (We're on the bleeding edge here apparently!).
 
-To install the Conan 2D20 system for development on Foundry Virtual Tabletop:
+To install the Mutant 2D20 system for development on Foundry Virtual Tabletop:
 
 1. Clone the repository `git clone https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT`
 1. Copy foundryconfig.example.json to foundryconfig.json and update the data-path to root of your foundry server's Data directory.
@@ -34,7 +34,7 @@ You can find out where the `foundrydata` folder is located in the Configuration 
 
 ## Testing
 
-<!-- [![pipeline status](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/badges/master/pipeline.svg)](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/-/commits/master)
+<!-- [![pipeline status](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/badges/master/pipeline.svg)](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/-/commits/master)
 -->
 Please run your code changes in a Mutant Chronicles (3rd Edition) World before commiting to GitHub.
 
@@ -45,8 +45,8 @@ Before major code commits, ensure all standard entities remain functional:
 
 ## Submitting changes
 
-1. Open an [Issue](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/-/issues/new) to document the fix or the feature proposed if no other exists.
-1. **Create merge request and branch** from your [Issue](https://gitlab.com/fvtt-modiphius/foundryvtt-conan2d20/-/issues/).
+1. Open an [Issue](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/-/issues/new) to document the fix or the feature proposed if no other exists.
+1. **Create merge request and branch** from your [Issue](https://gitlab.com/fvtt-modiphius/foundryvtt-mc3e/-/issues/).
 1. **We require a [DCO](https://developercertificate.org/) on each commit**. We cannot accept any merge requests that are not submitted with a DCO.
 1. Larger PRs should be broken into logical commits. Smaller PRs should be submitted as a single commit.
 1. Run the bundled [Pre-commit Checks] before opening a Merge Request.

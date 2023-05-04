@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "conan2d20",
+  "name": "mc3e",
   "version": "1.0.0",
-  "description": "CSS compiler for the Conan 2D20 system",
+  "description": "CSS compiler for the Mutant 2D20 system",
   "author": "Jerome Lavoie",
   "license": "MIT",
   "scripts": {

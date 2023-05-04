@@ -1,8 +1,8 @@
 {
-  "CONAN": {
-    "title": "Mutant Cronicle",
-    "fulltitle": "Mutant Cronicle (3rd edition)",
-    "welcomeMsg": "Welcome to Mutant Cronicle (3rd edition)",
+  "MUTANT": {
+    "title": "Robert E. Howards Mutant",
+    "fulltitle": "Robert E. Howard's Mutant: Adventures in an Age Undreamed Of",
+    "welcomeMsg": "Welcome to Robert E. Howard's Mutant: Adventures in an Age Undreamed Of",
     "momentum": "Momentum",
     "available": "available",
     "Bonuses": "Bonuses",
@@ -859,7 +859,7 @@
         "bles": "Blessed items have been enchanted by a god. They contain magic beyond that of mortal sorcery and can bestow special abilities, described in each item’s description. These abilities have the Malediction Quality (see below) equal to X which can be activated as a Minor Action. Unless otherwise stated, they are active for only one turn, and can be used once per scene.",
         "bril": "Brilliant items reflect light in a dazzling fashion. If held to the light, they can often dazzle the unprepared and prevent an attack. To use the Brilliant Quality, the player character must make a Challenging (D2) Thievery test, which can be resisted with either Insight, Parry, or Thievery. If the test is successful, the target is momentarily blinded, suffering the Blind condition for one turn plus one turn for every 2 Momentum spent.",
         "curs": "Cursed items, for good or ill, bear contagious magic. When first held by a player character, that character must make a Discipline test equal to X or the spell housed within the item will be immediately cast upon the wielder. Attempting to avoid contact with such an item requires a Sorcery test with a Difficulty equal to one step lower than that Discipline test.",
-        "ench": "Enchanted items have had a spell placed within them. Suggested guidelines for using and creating enchanted items can be found in the Conan corebook on page 143. Where the Enchanted Quality has a value, this indicates the amount of Doom that the player character must pay to activate the item’s spell. Enchanted items do not allow player characters to change the Momentum spends listed into their construction, but a sorcerer possessing an enchanted item can spend a Fortune point to cast its spell as if they had learnt the spell themselves. If a sorcerer chooses to do this, the item confers no additional benefit beyond allowing for the spell to be cast",
+        "ench": "Enchanted items have had a spell placed within them. Suggested guidelines for using and creating enchanted items can be found in the Mutant corebook on page 143. Where the Enchanted Quality has a value, this indicates the amount of Doom that the player character must pay to activate the item’s spell. Enchanted items do not allow player characters to change the Momentum spends listed into their construction, but a sorcerer possessing an enchanted item can spend a Fortune point to cast its spell as if they had learnt the spell themselves. If a sorcerer chooses to do this, the item confers no additional benefit beyond allowing for the spell to be cast",
         "enso": "Ensorcelled items are items that have the capability of harming Horrors and other magical entities. So long as the wielder pays X Doom at the start of combat, Ensorcelled items gain the Piercing X Quality against any creature gaining Soak from being a Horror, and bypass any Soak gained from the Incorporeal special ability.",
         "intr": "Intriguing items draw much attention from the great and the good. If an Intriguing item is possessed by a single player character, that player character gains X Gold every Carousing phase, after they’ve paid their Upkeep.",
         "male": "Some items refuse to impart their powers without some form of compensation, and in this case, the price is ill luck in the immediate future. When an item has the Malediction Quality, it can’t be used for any skill test without paying X Doom first.",

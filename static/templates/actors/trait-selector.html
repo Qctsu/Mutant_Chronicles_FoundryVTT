@@ -48,7 +48,7 @@
               id="input_exception_{{key}}"
               name="{{key}}"
               value="{{choice.exceptions}}"
-              placeholder="e.g. except {{localize "CONAN.weaponTraits.inc"}}"
+              placeholder="e.g. except {{localize "MUTANT.weaponTraits.inc"}}"
               data-dtype="String"
             />
           {{/if}}
@@ -58,11 +58,11 @@
   </ol>
   {{#unless hasValues}}
     <div class="form-group-stacked trait-footer">
-      <label>{{localize "CONAN.specialLabel"}}:</label>
+      <label>{{localize "MUTANT.specialLabel"}}:</label>
       <input type="text" name="custom" value="{{custom}}" data-dtype="String" />
     </div>
   {{/unless}}
   <button class="trait-footer" type="submit" name="submit" value="1">
-    <i class="far fa-save"></i>{{localize "CONAN.updateActorLabel"}}
+    <i class="far fa-save"></i>{{localize "MUTANT.updateActorLabel"}}
   </button>
 </form>

@@ -2,13 +2,13 @@
   <aside>
     <img
       class="logo"
-      src="systems/conan2d20/assets/conan_logo.png"
+      src="systems/mc3e/assets/mutant_logo.png"
       alt=""
       srcset=""
     />
   </aside>
   <!-- Sheet Header -->
-  {{> systems/conan2d20/templates/actors/main/actor-header.html}}
+  {{> systems/mc3e/templates/actors/main/actor-header.html}}
   <nav class="sheet-navigation" data-group="primary">
     <a class="item active" data-tab="character"></a>
   </nav>
@@ -31,7 +31,7 @@
               <section class="character-traits">
                 <div class="pc pc_languages">
                   <h4 class="co-title">
-                    {{localize 'CONAN.backgroundLanguages'}}
+                    {{localize 'MUTANT.backgroundLanguages'}}
                   </h4>
                   <ul class="tags">
                     {{#each system.background.languages.value as |v k|}}
@@ -62,9 +62,9 @@
               <div class="detail-sheet">
                 <div class="pc pc_homeland">
                   <label for="pc_homeland">
-                    {{localize 'CONAN.backgroundHomeland'}}
+                    {{localize 'MUTANT.backgroundHomeland'}}
                   </label>
-                  <span title="{{localize 'CONAN.backgroundHomelandTitle'}}">
+                  <span title="{{localize 'MUTANT.backgroundHomelandTitle'}}">
                     <input
                       id="pc pc_homeland"
                       name="system.background.homeland.value"
@@ -76,9 +76,9 @@
                 </div>
                 <div class="pc pc_caste">
                   <label for="pc_caste">
-                    {{localize 'CONAN.backgroundCaste'}}
+                    {{localize 'MUTANT.backgroundCaste'}}
                   </label>
-                  <span title="{{localize 'CONAN.backgroundCasteTitle'}}">
+                  <span title="{{localize 'MUTANT.backgroundCasteTitle'}}">
                     <input
                       id="pc pc_caste"
                       name="system.background.caste.value"
@@ -90,9 +90,9 @@
                 </div>
                 <div class="pc pc_trait">
                   <label for="pc_trait">
-                    {{localize 'CONAN.backgroundTrait'}}
+                    {{localize 'MUTANT.backgroundTrait'}}
                   </label>
-                  <span title="{{localize 'CONAN.backgroundTraitTitle'}}">
+                  <span title="{{localize 'MUTANT.backgroundTraitTitle'}}">
                     <input
                       id="pc pc_trait"
                       name="system.background.story.trait.value"
@@ -104,9 +104,9 @@
                 </div>
                 <div class="pc pc_archetype">
                   <label for="pc_archetype">
-                    {{localize 'CONAN.backgroundArchetype'}}
+                    {{localize 'MUTANT.backgroundArchetype'}}
                   </label>
-                  <span title="{{localize 'CONAN.backgroundArchetypeTitle'}}">
+                  <span title="{{localize 'MUTANT.backgroundArchetypeTitle'}}">
                     <input
                       id="pc pc_archetype"
                       name="system.background.archetype.value"
@@ -118,9 +118,9 @@
                 </div>
                 <div class="pc pc_education">
                   <label for="pc_education">
-                    {{localize 'CONAN.backgroundEducation'}}
+                    {{localize 'MUTANT.backgroundEducation'}}
                   </label>
-                  <span title="{{localize 'CONAN.backgroundEducationTitle'}}">
+                  <span title="{{localize 'MUTANT.backgroundEducationTitle'}}">
                     <input
                       id="pc pc_education"
                       name="system.background.education.value"
@@ -133,7 +133,7 @@
                 <div class="detail-small">
                   <div class="pc pc_age">
                     <label for="pc_age">
-                      {{localize 'CONAN.backgroundAge'}}
+                      {{localize 'MUTANT.backgroundAge'}}
                     </label>
                     <span>
                       <input
@@ -147,7 +147,7 @@
                   </div>
                   <div class="pc pc_gender">
                     <label for="pc_gender">
-                      {{localize 'CONAN.backgroundGender'}}
+                      {{localize 'MUTANT.backgroundGender'}}
                     </label>
                     <span>
                       <input
@@ -168,7 +168,7 @@
       <hr style="margin-top: 1rem" />
       <section class="character-bio">
         <div class="character-biography">
-          <h3>{{localize "CONAN.biographyLabel"}}</h3>
+          <h3>{{localize "MUTANT.biographyLabel"}}</h3>
           {{editor content=system.details.biography.value
           target="system.details.biography.value" button=false owner=owner}}
         </div>

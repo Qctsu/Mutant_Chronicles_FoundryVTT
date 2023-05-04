@@ -12,7 +12,7 @@
     <div class="detail-sheet">
       <div class="detail-small">
         <div class="pc pc_age">
-          <label for="pc_age"> {{localize 'CONAN.backgroundAge'}} </label>
+          <label for="pc_age"> {{localize 'MUTANT.backgroundAge'}} </label>
           <span>
             <input
               id="pc pc_age"
@@ -24,7 +24,7 @@
           </span>
         </div>
         <div class="pc pc_gender">
-          <label for="pc_gender"> {{localize 'CONAN.backgroundGender'}} </label>
+          <label for="pc_gender"> {{localize 'MUTANT.backgroundGender'}} </label>
           <span>
             <input
               id="pc pc_gender"
@@ -38,9 +38,9 @@
       </div>
       <div class="pc pc_homeland">
         <label for="pc_homeland">
-          {{localize 'CONAN.backgroundHomeland'}}
+          {{localize 'MUTANT.backgroundHomeland'}}
         </label>
-        <span title="{{localize 'CONAN.backgroundHomelandTitle'}}">
+        <span title="{{localize 'MUTANT.backgroundHomelandTitle'}}">
           <input
             id="pc pc_homeland"
             name="system.background.homeland.value"
@@ -51,7 +51,7 @@
         </span>
       </div>
       <div class="pc pc_languages">
-        <label> {{localize 'CONAN.backgroundLanguages'}} </label>
+        <label> {{localize 'MUTANT.backgroundLanguages'}} </label>
         <ul class="tags">
           {{#each knownLanguages as |k|}}
           <li class="tag {{k}}">{{k}}</li>
@@ -83,6 +83,6 @@
     <hr />
   </div>
 
-  {{> systems/conan2d20/templates/actors/main/actor-details.html}}
+  {{> systems/mc3e/templates/actors/main/actor-details.html}}
 
 </div>

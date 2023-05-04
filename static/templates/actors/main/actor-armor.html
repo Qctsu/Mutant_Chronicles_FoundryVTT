@@ -1,8 +1,8 @@
 <div class="sidebar-armor">
   <div class="courage-value">
-    <label>{{localize "CONAN.healthCourage"}}</label>
+    <label>{{localize "MUTANT.healthCourage"}}</label>
     <input
-      title="{{localize "CONAN.healthCourageTitle"}}"
+      title="{{localize "MUTANT.healthCourageTitle"}}"
       name="system.health.courage"
       type="Number"
       value="{{system.health.courage}}"
@@ -14,15 +14,15 @@
     <table>
       <tr class="tracker-header">
         <th
-          title="{{localize "CONAN.armorSoakTitle"}}"
+          title="{{localize "MUTANT.armorSoakTitle"}}"
           class="armor-header"
           colspan="2"
         >
-          {{localize "CONAN.armorSoakLabel"}}
+          {{localize "MUTANT.armorSoakLabel"}}
         </th>
       </tr>
       <tr class="tracker-entry">
-        <td class="tracker-label">{{ localize "CONAN.coverage.head" }}</td>
+        <td class="tracker-label">{{ localize "MUTANT.coverage.head" }}</td>
         <td class="tracker-score">
           <input
             type="Number"
@@ -33,7 +33,7 @@
         </td>
       </tr>
       <tr class="tracker-entry">
-        <td class="tracker-label">{{ localize "CONAN.coverage.torso" }}</td>
+        <td class="tracker-label">{{ localize "MUTANT.coverage.torso" }}</td>
         <td class="tracker-score">
           <input
             type="Number"
@@ -44,7 +44,7 @@
         </td>
       </tr>
       <tr class="tracker-entry">
-        <td class="tracker-label">{{ localize "CONAN.coverage.larm" }}</td>
+        <td class="tracker-label">{{ localize "MUTANT.coverage.larm" }}</td>
         <td class="tracker-score">
           <input
             type="Number"
@@ -55,7 +55,7 @@
         </td>
       </tr>
       <tr class="tracker-entry">
-        <td class="tracker-label">{{ localize "CONAN.coverage.rarm" }}</td>
+        <td class="tracker-label">{{ localize "MUTANT.coverage.rarm" }}</td>
         <td class="tracker-score">
           <input
             type="Number"
@@ -66,7 +66,7 @@
         </td>
       </tr>
       <tr class="tracker-entry">
-        <td class="tracker-label">{{ localize "CONAN.coverage.lleg" }}</td>
+        <td class="tracker-label">{{ localize "MUTANT.coverage.lleg" }}</td>
         <td class="tracker-score">
           <input
             type="Number"
@@ -77,7 +77,7 @@
         </td>
       </tr>
       <tr class="tracker-entry">
-        <td class="tracker-label">{{ localize "CONAN.coverage.rleg" }}</td>
+        <td class="tracker-label">{{ localize "MUTANT.coverage.rleg" }}</td>
         <td class="tracker-score">
           <input
             type="Number"
@@ -88,7 +88,7 @@
         </td>
       </tr>
       <tr class="table-footer">
-        <th class="shield-header">{{ localize "CONAN.weaponGroup.shi" }}</th>
+        <th class="shield-header">{{ localize "MUTANT.weaponGroup.shi" }}</th>
         <td class="shield-tracker-score">
           <input
             type="Number"
@@ -101,7 +101,7 @@
     </table>
   </div>
   <div class="armor-qualities">
-    <label>{{localize "CONAN.armorQualitiesActiveLabel"}}</label>
+    <label>{{localize "MUTANT.armorQualitiesActiveLabel"}}</label>
     <ul class="tags">
       {{#each system.armor.qualityCount as |v k|}}
         {{#ifCond k '===' 'heavy'}}

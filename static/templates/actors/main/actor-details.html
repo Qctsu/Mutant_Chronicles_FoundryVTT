@@ -1,8 +1,8 @@
 <div class="character-extras-container">
 
   <div class="pc pc_experience">
-    <h3>{{localize "CONAN.experienceLabel"}}</h3>
-    <label for="experience"> {{localize "CONAN.experienceEarnedLabel"}} </label>
+    <h3>{{localize "MUTANT.experienceLabel"}}</h3>
+    <label for="experience"> {{localize "MUTANT.experienceEarnedLabel"}} </label>
     <span>
       <input
         id="experience"
@@ -13,7 +13,7 @@
         placeholder="0"
       />
     </span>
-    <label for="experienceSpent"> {{localize "CONAN.experienceSpentLabel"}} </label>
+    <label for="experienceSpent"> {{localize "MUTANT.experienceSpentLabel"}} </label>
     <span>
       <input
         id="experienceSpent"
@@ -24,7 +24,7 @@
         placeholder="0"
       />
     </span>
-    <label for="experienceRemaining"> {{localize "CONAN.experienceRemainingLabel"}} </label>
+    <label for="experienceRemaining"> {{localize "MUTANT.experienceRemainingLabel"}} </label>
     <span>
       <input
         id="experienceRemaining"
@@ -38,8 +38,8 @@
   </div>
 
   <div class="pc pc_fortune">
-    <h3>{{localize "CONAN.fortune"}}</h3>
-    <label for="fortune"> {{localize "CONAN.fortuneCurrentLabel"}} </label>
+    <h3>{{localize "MUTANT.fortune"}}</h3>
+    <label for="fortune"> {{localize "MUTANT.fortuneCurrentLabel"}} </label>
     <span>
       <input
         id="fortune"
@@ -50,7 +50,7 @@
         placeholder="0"
       />
     </span>
-    <label for="startingFortune"> {{localize "CONAN.fortuneStartingLabel"}} </label>
+    <label for="startingFortune"> {{localize "MUTANT.fortuneStartingLabel"}} </label>
     <span>
       <input
         id="startingFortune"
@@ -64,7 +64,7 @@
   </div>
 
   <div class="character-conditions">
-    <h3>{{localize "CONAN.conditionsLabel"}}</h3>
+    <h3>{{localize "MUTANT.conditionsLabel"}}</h3>
     {{#each conditions as |condition c|}}
       <div class="sheet-condition" data-cond-id="{{condition.id}}">
         <label title="{{localize condition.title}}">
@@ -106,8 +106,8 @@
   </div>
 
   <div class="pc pc_renown">
-    <h3>{{localize "CONAN.renownLabel"}}</h3>
-    <label for="renown"> {{localize "CONAN.renownCurrentLabel"}} </label>
+    <h3>{{localize "MUTANT.renownLabel"}}</h3>
+    <label for="renown"> {{localize "MUTANT.renownCurrentLabel"}} </label>
     <span>
       <input
         id="renown"
@@ -121,8 +121,8 @@
   </div>
 
   <div class="pc pc_unbankedMomentum">
-    <h3>{{localize "CONAN.momentum"}}</h3>
-    <label for="standing"> {{localize "CONAN.momentumUnbankedLabel"}} </label>
+    <h3>{{localize "MUTANT.momentum"}}</h3>
+    <label for="standing"> {{localize "MUTANT.momentumUnbankedLabel"}} </label>
     <span>
       <input
         id="pc_unbankedMomentum"
@@ -134,12 +134,12 @@
         disabled
       />
     </span>
-    <button class="bank-momentum">{{localize "CONAN.rollMomentumSpendAssert"}}</button>
+    <button class="bank-momentum">{{localize "MUTANT.rollMomentumSpendAssert"}}</button>
   </div>
 
   <div class="pc pc_standing">
-    <h3>{{localize "CONAN.standingLabel"}}</h3>
-    <label for="standing"> {{localize "CONAN.standingCurrentLabel"}} </label>
+    <h3>{{localize "MUTANT.standingLabel"}}</h3>
+    <label for="standing"> {{localize "MUTANT.standingCurrentLabel"}} </label>
     <span>
       <input
         id="standing"

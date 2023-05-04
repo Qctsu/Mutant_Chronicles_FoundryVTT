@@ -7,7 +7,7 @@
           name="name"
           type="text"
           value="{{actor.name}}"
-          placeholder="{{localize "CONAN.characterNamePlaceholder"}}"
+          placeholder="{{localize "MUTANT.characterNamePlaceholder"}}"
         />
       </h1>
     </div>
@@ -24,30 +24,30 @@
   <section class="npc-sheet-body sheet-body">
     <!-- Sheet Body -->
     <section class="sheet-content content">
-      {{> systems/conan2d20/templates/actors/npc/type.html}}
+      {{> systems/mc3e/templates/actors/npc/type.html}}
 
       <!-- Mob Details -->
-      {{> systems/conan2d20/templates/actors/npc/mob.html}}
+      {{> systems/mc3e/templates/actors/npc/mob.html}}
 
       <!-- Attributes -->
-      {{> systems/conan2d20/templates/actors/npc/attributes.html}}
+      {{> systems/mc3e/templates/actors/npc/attributes.html}}
 
       <!-- Fields of Expertise -->
-      {{> systems/conan2d20/templates/actors/npc/fields.html}}
+      {{> systems/mc3e/templates/actors/npc/fields.html}}
 
       <!-- Health -->
-      {{> systems/conan2d20/templates/actors/npc/health.html}}
+      {{> systems/mc3e/templates/actors/npc/health.html}}
 
       <!-- Attacks -->
-      {{> systems/conan2d20/templates/actors/npc/attacks.html}}
+      {{> systems/mc3e/templates/actors/npc/attacks.html}}
 
       <!-- NPC Actions -->
-      {{> systems/conan2d20/templates/actors/npc/actions.html}}
+      {{> systems/mc3e/templates/actors/npc/actions.html}}
 
       <!-- Notes -->
       <div class="npc-notes">
         <div class="section-header">
-          <h2>{{localize "CONAN.npc.sections.notes"}}</h2>
+          <h2>{{localize "MUTANT.npc.sections.notes"}}</h2>
         </div>
         <div class="notes-entry">
           {{editor
@@ -63,7 +63,7 @@
       <!-- Source -->
       <div class="footer">
         <div class="entry-label">
-          <h4>{{localize "CONAN.ref-book"}}</h4>
+          <h4>{{localize "MUTANT.ref-book"}}</h4>
         </div>
         <div class="entry-score">
           <input
@@ -76,7 +76,7 @@
           />
         </div>
         <div class="entry-label">
-          <h4>{{localize "CONAN.ref-page"}}</h4>
+          <h4>{{localize "MUTANT.ref-page"}}</h4>
         </div>
         <div class="entry-score">
           <input

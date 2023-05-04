@@ -2,10 +2,10 @@
   <div class="sidebar-health">
     <div class="vigor-container">
       <div class="vigor-label">
-        <h2>{{localize "CONAN.healthVigor"}}</h2>
+        <h2>{{localize "MUTANT.healthVigor"}}</h2>
       </div>
       <div class="vigor-value">
-        <input title="{{localize 'CONAN.healthVigorTitle'}}"
+        <input title="{{localize 'MUTANT.healthVigorTitle'}}"
           name="system.health.physical.value"
           type="text"
           value="{{system.health.physical.value}}"
@@ -14,10 +14,10 @@
           size="1"
           readonly
         />
-        <label class="vigor-sub">{{localize "CONAN.healthVigorSubCur"}}</label>
+        <label class="vigor-sub">{{localize "MUTANT.healthVigorSubCur"}}</label>
       </div>
       <div class="vigor-max">
-        <input title="{{localize 'CONAN.healthVigorTitle'}}"
+        <input title="{{localize 'MUTANT.healthVigorTitle'}}"
           name="system.health.physical.max"
           type="text"
           value="{{system.health.physical.max}}"
@@ -26,12 +26,12 @@
           size="1"
           readonly
         />
-        <label class="vigor-sub">{{localize "CONAN.healthVigorSubMax"}}</label>
+        <label class="vigor-sub">{{localize "MUTANT.healthVigorSubMax"}}</label>
       </div>
     </div>
     <div class="vigor-wounds">
-      <label>{{localize 'CONAN.woundsLabel'}}</label>
-      <span title="{{localize 'CONAN.woundsTitle'}}">
+      <label>{{localize 'MUTANT.woundsLabel'}}</label>
+      <span title="{{localize 'MUTANT.woundsTitle'}}">
         <div class="dots-row" data-target="system.health.physical.wounds.value">
           {{#each system.health.physical.wounds.dots as |v k|}}
           <span
@@ -56,11 +56,11 @@
     </div>
     <div class="resolve-container">
       <div class="resolve-label">
-        <h2>{{localize 'CONAN.healthResolve'}}</h2>
+        <h2>{{localize 'MUTANT.healthResolve'}}</h2>
       </div>
       <div class="resolve-value">
         <input
-          title="{{localize 'CONAN.healthResolveTitle'}}"
+          title="{{localize 'MUTANT.healthResolveTitle'}}"
           name="system.health.mental.value"
           type="text"
           value="{{system.health.mental.value}}"
@@ -69,11 +69,11 @@
           size="1"
           readonly
         />
-        <label class=resolve-sub>{{localize 'CONAN.healthVigorSubCur'}}</label>
+        <label class=resolve-sub>{{localize 'MUTANT.healthVigorSubCur'}}</label>
       </div>
       <div class="resolve-max">
         <input
-          title="{{localize 'CONAN.healthResolveTitle'}}"
+          title="{{localize 'MUTANT.healthResolveTitle'}}"
           name="system.health.mental.max"
           type="text"
           value="{{system.health.mental.max}}"
@@ -82,12 +82,12 @@
           size="1"
           readonly
         />
-        <label class=resolve-sub>{{localize 'CONAN.healthVigorSubMax'}}</label>
+        <label class=resolve-sub>{{localize 'MUTANT.healthVigorSubMax'}}</label>
       </div>
     </div>
     <div class="resolve-traumas">
-      <label>{{localize 'CONAN.traumasLabel'}}</label>
-      <span title="{{localize 'CONAN.traumasTitle'}}">
+      <label>{{localize 'MUTANT.traumasLabel'}}</label>
+      <span title="{{localize 'MUTANT.traumasTitle'}}">
         <div class="dots-row" data-target="system.health.mental.traumas.value">
           {{#each system.health.mental.traumas.dots as |v k|}}
           <span
@@ -118,7 +118,7 @@
     name="system.health.physical.fatigue"
     type="number"
     value="{{system.health.physical.fatigue}}"
-    title="{{localize 'CONAN.fatigueTitle'}}"
+    title="{{localize 'MUTANT.fatigueTitle'}}"
     data-dtype="text"
     placeholder="0"
     size="2"
@@ -130,7 +130,7 @@
     name="system.health.mental.despair"
     type="number"
     value="{{system.health.mental.despair}}"
-    title="{{localize 'CONAN.despairTitle'}}"
+    title="{{localize 'MUTANT.despairTitle'}}"
     data-dtype="text"
     placeholder="0"
     size="2"

@@ -83,14 +83,14 @@
         {{#if item.system.broken}}
           <a
             class="item-control item-toggle-broken active"
-            title="{{localize CONAN.ui.itemBroken}}"
+            title="{{localize MUTANT.ui.itemBroken}}"
           >
             <i class="fas fa-unlink"></i>
           </a>
         {{else}}
           <a
             class="item-control item-toggle-broken"
-            title="{{localize CONAN.ui.itemBroken}}"
+            title="{{localize MUTANT.ui.itemBroken}}"
           >
             <i class="fas fa-link"></i>
           </a>
@@ -98,7 +98,7 @@
 
         <a
           class="item-control item-toggle-equip {{#if item.system.equipped}}active{{/if}}"
-          title="{{localize CONAN.ui.itemEquipped}}"
+          title="{{localize MUTANT.ui.itemEquipped}}"
         >
           <i class="fas fa-tshirt"></i>
         </a>
@@ -107,19 +107,19 @@
       {{#if item.canBeStowed}}
         <a class="item-control item-stowage-view {{#ifCond item.system.stowedIn '!==' ""}}active{{/ifCond}}"
           {{#ifCond item.system.stowedIn '!==' ""}}
-            title="{{localize 'CONAN.stowedIn'}} {{item.stowedInName}}"
+            title="{{localize 'MUTANT.stowedIn'}} {{item.stowedInName}}"
           {{/ifCond}}
         >
           <i class="fas fa-box-open"></i>
         </a>
       {{/if}}
 
-      <a class="item-control item-edit" title="{{localize CONAN.editItemTitle}}"
+      <a class="item-control item-edit" title="{{localize MUTANT.editItemTitle}}"
         ><i class="fas fa-edit"></i>
       </a>
       <a
         class="item-control item-delete"
-        title="{{localize CONAN.deleteItemTitle}}"
+        title="{{localize MUTANT.deleteItemTitle}}"
       >
         <i class="fas fa-trash"></i>
       </a>

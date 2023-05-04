@@ -8,28 +8,28 @@
         <span>
           <input
             type="Number"
-            title="{{localize 'CONAN.goldPouchTitle'}}"
+            title="{{localize 'MUTANT.goldPouchTitle'}}"
             name="system.resources.gold.value"
             value="{{system.resources.gold.value}}"
             data-dtype="Number"
           />
         </span>
       </li>
-      <li class="subtract-gold" title="{{localize 'CONAN.subtractGoldTitle'}}">
+      <li class="subtract-gold" title="{{localize 'MUTANT.subtractGoldTitle'}}">
         <button type="button">-</button>
       </li>
-      <li class="add-gold" title="{{localize 'CONAN.addGoldTitle'}}">
+      <li class="add-gold" title="{{localize 'MUTANT.addGoldTitle'}}">
         <button type="button">+</button>
       </li>
     </ol>
 
     <ol class="upkeep">
-        <h3 class="upkeep-header" title="{{localize 'CONAN.upkeepValueTitle'}}">
+        <h3 class="upkeep-header" title="{{localize 'MUTANT.upkeepValueTitle'}}">
           Upkeep
         </h3>
         <input
           type="Number"
-          title="{{localize 'CONAN.upkeepValueTitle'}}"
+          title="{{localize 'MUTANT.upkeepValueTitle'}}"
           name="system.resources.upkeep.value"
           value="{{system.resources.upkeep.value}}"
           data-dtype="Number"
@@ -56,10 +56,10 @@
 
             {{!-- Standard sections with Quantity and Encumbrance --}}
             <span class="item-quantity">
-              {{localize "CONAN.quantityLabel"}}
+              {{localize "MUTANT.quantityLabel"}}
             </span>
             <span class="item-weight">
-              {{localize "CONAN.encumbranceShortLabel"}}
+              {{localize "MUTANT.encumbranceShortLabel"}}
             </span>
 
         {{else}} {{!-- #if section.standardHeader --}}
@@ -67,7 +67,7 @@
           {{!-- Consumables have a different header layout --}}
           {{#ifCond sid '===' 'consumable'}}
             <span class="item-quantity">
-              {{localize "CONAN.sorceryAvailableUsesLabel"}}
+              {{localize "MUTANT.sorceryAvailableUsesLabel"}}
             </span>
             <span class="item-weight">
               &nbsp;
@@ -77,20 +77,20 @@
           {{!-- Kit items have a different header layout --}}
           {{#ifCond sid '===' 'kit'}}
             <span class="item-quantity">
-              {{localize "CONAN.kitUsesAvailableLabel"}}
+              {{localize "MUTANT.kitUsesAvailableLabel"}}
             </span>
             <span class="item-weight">
-              {{localize "CONAN.encumbranceShortLabel"}}
+              {{localize "MUTANT.encumbranceShortLabel"}}
             </span>
           {{/ifCond}}
 
           {{!-- Transportation items have a different header layout --}}
           {{#ifCond sid '===' 'transportation'}}
             <span class="item-quantity">
-              {{localize "CONAN.transpoPassengerLabel"}}
+              {{localize "MUTANT.transpoPassengerLabel"}}
             </span>
             <span class="item-weight">
-              {{localize "CONAN.transpoStowageLabel"}}
+              {{localize "MUTANT.transpoStowageLabel"}}
             </span>
           {{/ifCond}}
 
@@ -102,7 +102,7 @@
             <div class="item-controls" style="display: flex">
               <a
                 class="item-control item-create"
-                title="{{localize CONAN.createItemTitle}}"
+                title="{{localize MUTANT.createItemTitle}}"
                 data-type="{{sid}}"
               >
                 <i class="fas fa-plus"></i>
@@ -126,7 +126,7 @@
       >
         {{#each section.items as |item itemId|}}
           {{>
-            systems/conan2d20/templates/actors/tabs/item-line.html
+            systems/mc3e/templates/actors/tabs/item-line.html
             item=item
             owner=../../owner
             level=1
@@ -141,17 +141,17 @@
   {{#with system.encumbrance}}
   <div class="encumbrance {{#if isEncumbered}}encumbered{{/if}} {{#if isOverLimit}}over-limit{{/if}}">
     <img
-      src="systems/conan2d20/assets/icons/icon-backpack.png"
+      src="systems/mc3e/assets/icons/icon-backpack.png"
       alt="Encumbrance"
     />
     <span class="encumbrance-bar" style="width:{{limitPercentageMax}}%"></span>
     <div class="encumbrance-label">
       <span>
-        {{localize 'CONAN.encumbranceShortLabel'}}: {{combinedEnc}} /
+        {{localize 'MUTANT.encumbranceShortLabel'}}: {{combinedEnc}} /
         {{localize encumbranceFactor.carried}} /
         {{localize encumbranceFactor.fatigue}}
       </span>
-      <span>{{localize 'CONAN.encumbranceMaxLabel'}}: {{limit}}</span>
+      <span>{{localize 'MUTANT.encumbranceMaxLabel'}}: {{limit}}</span>
     </div>
     <span class="bar-bg"></span>
   </div>

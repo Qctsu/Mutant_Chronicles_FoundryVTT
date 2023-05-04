@@ -21,7 +21,7 @@ module.exports = (env, argv) => {
   const config = {
     context: __dirname,
     entry: {
-      main: './src/mutant.js',
+      main: './src/mc3e.js',
     },
     mode: 'none',
     module: {
@@ -58,7 +58,7 @@ module.exports = (env, argv) => {
       }),
       new WriteFilePlugin(),
       new MiniCssExtractPlugin({
-        filename: 'styles/conan2d20.css',
+        filename: 'styles/mc3e.css',
       }),
     ],
     resolve: {
