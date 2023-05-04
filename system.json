@@ -2,8 +2,7 @@
   "id": "mc3e",
   "title": "Mutant Chronicles (3rd Edition)",
   "description": "A community-contributed game system for running games of Mutant Chronicles (3rd Edition) on the Foundry VTT environment. Please refer to the README.md file for reporting issues.",
-  "version": "0.0.1",
-  "schema": "0.22122701",
+  "version": "1.8.1",
   "compatibility": {
     "minimum": "10",
     "verified": "10",
