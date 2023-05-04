@@ -11,14 +11,13 @@
   },
   "authors": [
     {
-      "name": "",
-      "email": "",
-      "discord": ""
+      "name": "Kucu",
+      "email": "kontakt@rainbowcode.pl",
+      "discord": "Kucu#7777"
     },
     {
-      "name": "",
-      "email": "",
-      "discord": ""
+      "name": "PoProstuPaweł",
+      "discord": "Po prostu Paweł#5685"
     }
   ],
   "scripts": [],
@@ -90,7 +89,6 @@
     }
   ],
   "socket": true,
-  "initiative": null,
   "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "health.physical",
@@ -101,6 +99,5 @@
   "changelog": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/blob/release/CHANGELOG.md",
   "manifest": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/releases/latest/download/system.json",
   "download": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/releases/latest/download/mc3e.zip",
-  "license": "LICENSE.txt",
-  "background": "./assets/LoadingScreenBackdropImage_11.png"
+  "license": "LICENSE.txt"
 }
