@@ -1,8 +1,8 @@
 {
   "id": "mc3e",
-  "title": "Robert E. Howard's Mutant: Adventures In An Age Undreamed Of",
-  "description": "A community-contributed game system for running games of MUTANT in the cinematic 2D20 game system by Modiphius on the Foundry VTT environment. Please refer to the README.md file for reporting issues.",
-  "version": "1.8.1",
+  "title": "Mutant Chronicles (3rd Edition)",
+  "description": "A community-contributed game system for running games of Mutant Chronicles (3rd Edition) on the Foundry VTT environment. Please refer to the README.md file for reporting issues.",
+  "version": "0.0.1",
   "schema": "0.22122701",
   "compatibility": {
     "maximum": "10",
@@ -11,21 +11,14 @@
   },
   "authors": [
     {
-      "name": "Jerome Lavoie",
-      "email": "kayhos@gmail.com",
-      "discord": "KayhosRaven#1642",
-      "reddit": "u/Kayhosraven"
+      "name": "",
+      "email": "",
+      "discord": ""
     },
     {
-      "name": "Ian Henry",
-      "url": "http://www.blackbell.games/",
-      "discord": "eeyun#0890"
-    },
-    {
-      "name": "Paul Maskelyne",
-      "discord": "Muttley#3296",
-      "email": "mu77ley@gmail.com",
-      "mastodon": "@muttley@dice.camp"
+      "name": "",
+      "email": "",
+      "discord": ""
     }
   ],
   "scripts": [],
