@@ -2,10 +2,105 @@
   "id": "mc3e",
   "title": "Mutant Chronicles (3rd Edition)",
   "description": "A community-contributed game system for running games of Mutant Chronicles (3rd Edition) on the Foundry VTT environment. Please refer to the README.md file for reporting issues.",
-  "version": "1.8.1",
+  "version": "0.0.1",
+  "schema": "0.22122701",
   "compatibility": {
     "minimum": "10",
     "verified": "10",
     "maximum": "10"
-  }
+  },
+  "authors": [
+    {
+      "name": "",
+      "email": "",
+      "discord": ""
+    },
+    {
+      "name": "",
+      "email": "",
+      "discord": ""
+    }
+  ],
+  "scripts": [],
+  "modules": ["main.bundle.js"],
+  "styles": ["styles/mc3e.css"],
+  "packs": [
+    {
+      "name": "actions-core",
+      "label": "Actions (Core)",
+      "system": "mc3e",
+      "module": "mc3e",
+      "path": "./packs/actions-core.db",
+      "type": "Item"
+    },
+    {
+      "name": "belongings-core",
+      "label": "Belongings (Core)",
+      "system": "mc3e",
+      "module": "mc3e",
+      "path": "./packs/belongings-core.db",
+      "type": "Item"
+    },
+    {
+      "name": "documentation",
+      "label": "Documentation",
+      "system": "mc3e",
+      "module": "mc3e",
+      "path": "packs/documentation.db",
+      "type": "JournalEntry"
+    },
+    {
+      "name": "macro-core",
+      "label": "Macro (Core)",
+      "system": "mc3e",
+      "module": "mc3e",
+      "path": "./packs/macro-core.db",
+      "type": "Macro"
+    },
+    {
+      "name": "rollable-tables",
+      "label": "Rollable Tables",
+      "system": "mc3e",
+      "module": "mc3e",
+      "path": "./packs/rollable-tables.db",
+      "type": "RollTable"
+    },
+    {
+      "name": "sorcery-core",
+      "label": "Sorcery (Core)",
+      "system": "mc3e",
+      "module": "mc3e",
+      "path": "./packs/sorcery-core.db",
+      "type": "Item"
+    },
+    {
+      "name": "talents-core",
+      "label": "Talents (Core)",
+      "system": "mc3e",
+      "module": "mc3e",
+      "path": "./packs/talents-core.db",
+      "type": "Item"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "socket": true,
+  "initiative": null,
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "health.physical",
+  "secondaryTokenAttribute": "health.mental",
+  "allowBugReporter": true,
+  "url": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT",
+  "bugs": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/issues",
+  "changelog": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/blob/release/CHANGELOG.md",
+  "manifest": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/releases/latest/download/system.json",
+  "download": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/releases/latest/download/mc3e.zip",
+  "license": "LICENSE.txt",
+  "background": "./assets/LoadingScreenBackdropImage_11.png"
 }
