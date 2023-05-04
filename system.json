@@ -96,10 +96,10 @@
   "primaryTokenAttribute": "health.physical",
   "secondaryTokenAttribute": "health.mental",
   "allowBugReporter": true,
-  "bugs": "https://github.com/qctsu/mutant_chronicles_foundryVTT/-/issues",
-  "url": "https://github.com/qctsu/mutant_chronicles_foundryVTT",
-  "manifest": "https://github.com/qctsu/mutant_chronicles_foundryVTT/-/jobs/artifacts/release/raw/system.json?job=build",
-  "download": "https://github.com/qctsu/mutant_chronicles_foundryVTT/-/jobs/artifacts/release/raw/mc3e.zip?job=build",
+  "bugs": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/-/issues",
+  "url": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT",
+  "manifest": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/-/jobs/artifacts/release/raw/system.json?job=build",
+  "download": "https://github.com/Qctsu/Mutant_Chronicles_FoundryVTT/-/jobs/artifacts/release/raw/mc3e.zip?job=build",
   "license": "LICENSE.txt",
   "background": "./assets/LoadingScreenBackdropImage_11.png"
 }
