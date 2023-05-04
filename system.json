@@ -19,9 +19,13 @@
       "discord": "Po prostu Paweł#5685"
     }
   ],
+  "esmodules": [
+    "main.bundle.js"
+  ],
+  "styles": [
+    "styles/mc3e.css"
+  ],
   "scripts": [],
-  "esmodules": ["main.bundle.js"],
-  "styles": ["styles/mc3e.css"],
   "packs": [
     {
       "name": "actions-core",
