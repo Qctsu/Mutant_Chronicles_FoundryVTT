@@ -22,7 +22,7 @@
     }
   ],
   "scripts": [],
-  "modules": ["main.bundle.js"],
+  "esmodules": ["main.bundle.js"],
   "styles": ["styles/mc3e.css"],
   "packs": [
     {
